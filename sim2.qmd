@@ -1,0 +1,6 @@
+---
+title: "Sim Page 2"
+editor: visual
+---
+
+This is testing a second main page under simulation.
