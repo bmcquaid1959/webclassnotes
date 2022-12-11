@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nEdited by Bob"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Class Notes",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nEdited by Bob"
+  },
+  {
+    "objectID": "sim2.html",
+    "href": "sim2.html",
+    "title": "Sim Page 2",
+    "section": "",
+    "text": "This is testing a second main page under simulation."
+  },
+  {
+    "objectID": "simulation.html",
+    "href": "simulation.html",
+    "title": "Simulation",
+    "section": "",
+    "text": "This is just a test to see the side bar."
+  }
+]
