@@ -1,36 +1,87 @@
 project:
   type: website
+#  output-dir: _site
+  output-dir: docs
 
 website:
   title: "Professor McQuaid"
   page-footer:
     center: "Copyright 2023, Bob McQuaid"
+  page-navigation: true
   navbar:
-    background: primary
+    background: "#226666"
     search: true
     left:
       - text: "Home"
         file: index.qmd
       - text: "Simulation"
-        file: simulation.qmd
+        file: Sim1/simulation.qmd
+        icon: "sliders"
       - text: "Optimization"
-        file: optimization.qmd
+        file: Opt1/optimization.qmd
+        icon: "bezier"
       - text: "Advanced Statistics"
-        file: advancedstats.qmd
+        file: AdvStats1/advancedstats.qmd
+        icon: "pie-chart"
+      - text: "Solutions"
+        file: Sol/index.qmd
+        icon: "patch-question"
       - about.qmd
 
   sidebar:
-    - title: "Simulation"
-      style: "floating"
+    - id: simulation
+      title: "Simulation"
+      style: "docked"
       contents:
-        - simulation.qmd
-        - sim2.qmd
-    - title: "Optimization"
+        - text: "Simulation"
+
+        - Sim1/simulation.qmd
+        - Sim1/sim2.qmd
+        # navigation items
+
+    - id: optimization
+      title: "Optimization"
       contents:
-      - optimization.qmd
+        - text: "Optimization"
+        - text: "Course Plan"
+          file: Opt1/optimization.qmd
+        - section: "Content Schedule"
+          contents:
+            - text: Week 1
+              file: Opt1/contentW1.qmd
+            - text: Week 2
+              file: Opt1/contentW2.qmd
+            - text: Week 3
+              file: Opt1/contentW3.qmd
+            - text: Week 4
+              file: Opt1/contentW4.qmd
+            - text: Week 5
+              file: Opt1/contentW5.qmd
+            - text: Week 6
+              file: Opt1/contentW6.qmd
+            - text: Week 7
+              file: Opt1/contentW7.qmd
+        - section: "Problem Solutions"
+          contents:
+            - text: Homework 1
+              file: Opt1/solutionsHW1.qmd
+            - text: Homework 2
+              file: Opt1/solutionsHW2.qmd
+            - text: Homework 3
+              file: Opt1/solutionsHW3.qmd
+            - text: Homework 4
+              file: Opt1/solutionsHW4.qmd
+            - text: Homework 5
+              file: Opt1/solutionsHW5.qmd
+            - text: Exam 1
+              file: Opt1/solutionsEX1.qmd
+            - text: Exam 2 Part 1
+              file: Opt1/solutionsEX2P1.qmd
+
     - title: "Advanced Statistics"
       contents:
-        - advancedstats.qmd
+        - AdvStats1/advancedstats.qmd
+        # navigation items
 
 
 format:

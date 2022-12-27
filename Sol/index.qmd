@@ -1,0 +1,11 @@
+---
+title: "Solutions"
+---
+
+<!-- setting up solutions page  -->
+
+## Solutions for Optimization Modeling
+
+## Solutions for Advanced Statistics
+
+## Solutions for Simulation Modeling

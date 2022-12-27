@@ -1,0 +1,9 @@
+---
+title: "Optimization Modeling"
+subtitle: "Homework 1 Solution"
+number-sections: false
+---
+
+## Solution to HW1
+
+![Caption](../images/UnderConstruction.png){fig-alt="Alternative Text" fig-align="center"}

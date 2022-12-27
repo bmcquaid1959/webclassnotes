@@ -1,0 +1,49 @@
+---
+title: "Course Plan"
+subtitle: ""
+number-sections: false
+---
+
+::: {.callout-note}
+## Access to Learning Management System
+
+For those enrolled, this course is available at: [2pep Online Business](https://2pep.onlinebusiness.pepperdine.edu). The course title is:<br>
+DESC 622-01OL:2690 Optimization Modeling
+
+:::
+
+## Course Description
+
+Optimization problems arise in a multitude of ways as a means of solving problems in engineering design, portfolio design, system management, parameter estimation, statistics, and in the modeling of physical and behavioral phenomena. This is an introductory course in numerical methods for continuous optimization in finite dimensions. Optimization modeling techniques and numerical solution methodology will be applied to a range of important problems in operations, marketing, and finance. The optimization tools that we consider cover much of what is known as mathematical programming. We begin with linear programming and then progress through to nonlinear programming and integer programming.
+
+## Course Schedule
+
+There are three phases to the course schedule, basics of LP (weeks 1 and 2), the simplex method (weeks 3 and 4), and network and integer modeling (weeks 6-7). Sensitivity analysis is spread throughout the course. 
+
+1. Introduction to Modeling and Linear Programming<br>
+    * live session Jan 3
+2. Examples of Linear Programming Problems Using Spreadsheets
+    * **Homework 1** due Jan 9 by midnight 
+    * live session Jan 10
+3. The Simplex Method, Part I
+    * **Homework 2** due Jan 16 by midnight. 
+    * live session Jan 17
+4. The Simplex Method, Part II
+    * **Homework 3** due Jan 23 by midnight 
+    * live session Jan 24
+    * distribute Exam 1 (take home)
+5. Spreadsheet Modeling and Sensitivity Analysis
+    * **Exam 1** due Jan 30 by midnight 
+    * live session Jan 31
+6. Network and Integer modeling
+    * **Homework 4** due Feb 6 by midnight 
+    * live session Feb 7
+    * distribute Exam 2 Part 1 (take home)
+7. Integer Programming
+    * **Homework 5** due Feb 13 by midnight
+    * **Exam 2, Part 1** due Jan 30 by midnight
+    * live session Feb 14
+        * live session will include **Exam 2 part 2** in class (one hour) and a course wrap up (30 minutes)
+
+
+

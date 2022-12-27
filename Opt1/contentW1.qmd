@@ -1,0 +1,68 @@
+---
+title: "Introduction to Modeling and Linear Programming"
+subtitle: "Week 1 Content"
+number-sections: false
+---
+
+## Asynchronous content:
+
+The asynchronous content for week 1 serves two purposes: 
+
+1. an introduction to Management Science, Systems Theory, and some historical development, and
+2. The basics of the linear programming process using Excel and the graphical solution method. Asynchronous content for [Week 2](contentW2.qmd) provides five additional examples using Excel Solver.
+
+:::{.callout-important}
+While the introductory lecture positions the course content in the realm of Business Analytics, the examples covered focus on the process we will use throughout the course:  
+
+1. document input data
+2. identify the objective to be optimized
+3. identify the applicable constraints
+4. construct the model
+    a. highlight the **variables**
+    b. structure the **constraints** in standard form
+    c. formulate the **objective function**
+    d. analyze the model
+    e. conduct **sensitivity analysis**
+    f. describe and interpret **results**
+
+While viewing the asynchronous content (and for the rest of the class), *make sure you understand the concepts in item 4 above*. You will get better at this after [Week 2](contentW2.qmd).
+:::
+
+## Things to do
+
+The goal to be prepared for class is to view the asynchronous content *before* the live session for that week and complete/upload the practice problems (if provided). 
+
+::: {.callout-tip}
+## Things to do
+
+1. View the asynchronous content for Week 1.
+2. If you purchased the Ragsdale book, review the examples in chapters 1 and 2. Focus on step 4 in the "construct the model" list above.
+3. Peruse the following sections at [Perkins Intro to LP](https://sites.math.washington.edu/~perkins/381AWin14/handouts/chapter3.pdf)
+    3.1 What is a Linear Programming Problem
+    3.4 A Diet Problem
+    3.5 A Work Scheduling Problem
+    3.8 Blending Problems
+4. Try to setup the example problems for Item 3 in each of these sections using Excel. The examples are in algebraic formulation (which will help when we get to [Week 3](contentW3.qmd) and [4](contentW4.qmd))
+5. Be prepared at the beginning of the live session with any questions, clarifications, or observations you have.
+    
+:::
+
+
+## Deliverables for next week
+
+::: {.callout-warning}
+## Deliverables for next week
+
+Download [Homework 1 file](../_files/622HW_Week1.xlsx).<br>
+Place your Pepperdine User ID at the beginning of the filename.<br>
+Upload the completed (or as much as you did) work to the Assessments link at 2pep.
+
+
+Complete and upload the practice problems available in the Week 2 asynchronous content.
+
+* All due by midnight PST on Monday, January 9: 
+
+Solutions to homework 1 will be available after the deadline. **No late work is accepted**.
+:::
+
+

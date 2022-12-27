@@ -1,0 +1,7 @@
+---
+title: "Optimization Modeling"
+subtitle: "Homework 1 Solution"
+number-sections: false
+---
+
+

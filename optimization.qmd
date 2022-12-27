@@ -1,6 +1,0 @@
----
-title: "Optimization Modeling"
-editor: visual
----
-
-## Optimization Modeling

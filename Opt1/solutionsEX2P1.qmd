@@ -1,0 +1,7 @@
+---
+title: "Optimization Modeling"
+subtitle: "Exam 2 Part 1 Solution"
+number-sections: false
+---
+
+![Will be posted after due date for this assignment](../images/ComingSoon.png){fig-alt="Exam 2 Part 1 solution" fig-align="center"}

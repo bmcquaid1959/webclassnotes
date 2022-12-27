@@ -1,0 +1,77 @@
+---
+title: "Examples of Linear Programming Problems Using Spreadsheets"
+subtitle: "Week 2 Content"
+---
+
+## Asynchronous content:
+
+The asynchronous content for week 2 presents five examples of linear programs structured specifically to use Excel Solver.  
+
+  1. **Diet Problem**
+
+        A characteristic of this particular diet problem is to use proportions of each ingredient which must sum to 1. Then, the solution minimizes total cost of one pound of the ingredients the while meeting the nutritional requirement limits.  
+    
+  2. **Crude Oil Refinery Problem**
+    
+        This is a basic **blending problem** wherein four crude oils are blended to create four outputs (gasoline, heating oil, jet fuel, and lubricating oil). The input-output table shows the yield from each type of crude (input) processed on unit I or II. For example, a barrel of crude #4 processed in Unit 1 produces 0.5 gallons of Gasoline, 0.1 barrels of Heating Oil, 0.2 barrels of Jet Fuel, no lube oil, and 0.2 barrels are lost in processing. Notice only Crude #4 can be produced in Unit II both reduces loss and produces Lube Oil. The goal is to maximize profit while crude oil (input) is only available in limited supply and the products (output) each have a limit on maximum demand.
+  
+  3. **Portfolio Section Problem**
+  
+        This is a basic - single investment at time period 0 - portfolio problem with limits around average length of investment, average risk, average growth potential, and minimum cash requirements. We can use set the variables as the proportion invested in each summing to 1 OR to some arbitrary budget amount to analyze this problem.
+
+  4. **Agriculture Application Problem**
+  
+        This problem is somewhat like a blending problem where you have three brands of fertilizer each contributing varying amounts of nitrogen, phosphoric acid, and potash - how many bags of each brand (whole bags only) will satisfy the chemical restrictions and minimize cost?
+  
+
+  5. **Media Selection Problem**
+        The objective is to maximize ad exposures as measured by"audience points" given a limited budget and some investment restrictions. A main concern in this model is to structure the constraints in standard form (linear combination of variables on the left hand side and only a numeric value on the right hand side of the inequalities).
+
+:::{.callout-important}
+Major takeaways upon viewing these examples
+
+1. Structure variables, constraint formulas, and objective function
+2. Learn how to use relative and absolute cell references
+3. Using the SUMPRODUCT formula
+4. Loading the model into Excel Solver
+
+You will get better at this after completing Homework 1 and 2.
+:::
+
+## Things to do
+
+View the asynchronous content *before* the live session for that week and complete/upload the practice problems (if provided). 
+
+::: {.callout-tip}
+## Things to do before Jan 10
+
+1. View the asynchronous content for Week 2.
+2. Complete and upload the practice problems (part of Participation grade)
+3. If you purchased the Ragsdale book, review the examples in chapters 3. Focus on step 4 in the "construct the model" from the **Important** note in [Week 1](contentW1.qmd).
+4. Peruse the following sections at [Perkins Intro to LP](https://sites.math.washington.edu/~perkins/381AWin14/handouts/chapter3.pdf)
+    3.2 The Graphical Solution of Two-Variable Linear Programming Problems
+    3.7 Short-term Financial Planning
+    3.9 Production Process Models
+    3.10 Using Linear Programming to Solve Multiperiod Decision Problems: An Inventory Model
+    3.11 Multiperiod Financial Models
+    3.12 Multiperiod Work Scheduling
+5. Try to setup the example problems for Item 4 in each of these sections using Excel. The examples are in algebraic formulation (which will help when we get to [Week 3](contentW3.qmd) and [4](contentW4.qmd))
+6. Be prepared at the beginning of the live session with any questions, clarifications, or observations you have.
+
+:::
+
+## Deliverables for next week
+
+::: {.callout-warning}
+## Deliverables for next week
+
+Download [Homework 2 file](../_files/622HW_Week2.xlsx).<br>
+Place your Pepperdine User ID at the beginning of the filename.<br>
+Upload the completed (or as much as you did) work to the Assessments link at 2pep.
+
+Complete and upload the practice problems available in the Week 3 asynchronous content.
+
+* All due by midnight PST on Monday, January 16: 
+
+Solutions to homework 1 will be available after the deadline. **No late work is accepted**.
+:::

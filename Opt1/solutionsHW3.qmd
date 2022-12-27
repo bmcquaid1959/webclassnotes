@@ -1,0 +1,7 @@
+---
+title: "Optimization Modeling"
+subtitle: "Homework 3 Solution"
+number-sections: false
+---
+
+![Will be posted after due date for this assignment](../images/ComingSoon.png){fig-alt="Homework Solution 3" fig-align="center"}

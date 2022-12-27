@@ -7,24 +7,150 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nEdited by Bob"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Class Notes",
+    "objectID": "AdvStats1/advancedstats.html",
+    "href": "AdvStats1/advancedstats.html",
+    "title": "Advanced Statistics",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\nEdited by Bob"
+    "text": "RPython\n\n\nfizz_buzz <- function(fbnums = 1:50) {\n  output <- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
   },
   {
-    "objectID": "sim2.html",
-    "href": "sim2.html",
+    "objectID": "Opt1/contentW1.html",
+    "href": "Opt1/contentW1.html",
+    "title": "Introduction to Modeling and Linear Programming",
+    "section": "",
+    "text": "The asynchronous content for week 1 serves two purposes:\n\nan introduction to Management Science, Systems Theory, and some historical development, and\nThe basics of the linear programming process using Excel and the graphical solution method. Asynchronous content for Week 2 provides five additional examples using Excel Solver.\n\n\n\n\n\n\n\nImportant\n\n\n\nWhile the introductory lecture positions the course content in the realm of Business Analytics, the examples covered focus on the process we will use throughout the course:\n\ndocument input data\nidentify the objective to be optimized\nidentify the applicable constraints\nconstruct the model\n\nhighlight the variables\nstructure the constraints in standard form\nformulate the objective function\nanalyze the model\nconduct sensitivity analysis\ndescribe and interpret results\n\n\nWhile viewing the asynchronous content (and for the rest of the class), make sure you understand the concepts in item 4 above. You will get better at this after Week 2."
+  },
+  {
+    "objectID": "Opt1/contentW1.html#things-to-do",
+    "href": "Opt1/contentW1.html#things-to-do",
+    "title": "Introduction to Modeling and Linear Programming",
+    "section": "Things to do",
+    "text": "Things to do\nThe goal to be prepared for class is to view the asynchronous content before the live session for that week and complete/upload the practice problems (if provided).\n\n\n\n\n\n\nThings to do\n\n\n\n\nView the asynchronous content for Week 1.\nIf you purchased the Ragsdale book, review the examples in chapters 1 and 2. Focus on step 4 in the “construct the model” list above.\nPeruse the following sections at Perkins Intro to LP 3.1 What is a Linear Programming Problem 3.4 A Diet Problem 3.5 A Work Scheduling Problem 3.8 Blending Problems\nTry to setup the example problems for Item 3 in each of these sections using Excel. The examples are in algebraic formulation (which will help when we get to Week 3 and 4)\nBe prepared at the beginning of the live session with any questions, clarifications, or observations you have."
+  },
+  {
+    "objectID": "Opt1/contentW1.html#deliverables-for-next-week",
+    "href": "Opt1/contentW1.html#deliverables-for-next-week",
+    "title": "Introduction to Modeling and Linear Programming",
+    "section": "Deliverables for next week",
+    "text": "Deliverables for next week\n\n\n\n\n\n\nDeliverables for next week\n\n\n\nDownload Homework 1 file. Place your Pepperdine User ID at the beginning of the filename. Upload the completed (or as much as you did) work to the Assessments link at 2pep.\nComplete and upload the practice problems available in the Week 2 asynchronous content.\n\nAll due by midnight PST on Monday, January 9:\n\nSolutions to homework 1 will be available after the deadline. No late work is accepted."
+  },
+  {
+    "objectID": "Opt1/contentW2.html",
+    "href": "Opt1/contentW2.html",
+    "title": "Examples of Linear Programming Problems Using Spreadsheets",
+    "section": "",
+    "text": "The asynchronous content for week 2 presents five examples of linear programs structured specifically to use Excel Solver.\n\nDiet Problem\nA characteristic of this particular diet problem is to use proportions of each ingredient which must sum to 1. Then, the solution minimizes total cost of one pound of the ingredients the while meeting the nutritional requirement limits.\nCrude Oil Refinery Problem\nThis is a basic blending problem wherein four crude oils are blended to create four outputs (gasoline, heating oil, jet fuel, and lubricating oil). The input-output table shows the yield from each type of crude (input) processed on unit I or II. For example, a barrel of crude #4 processed in Unit 1 produces 0.5 gallons of Gasoline, 0.1 barrels of Heating Oil, 0.2 barrels of Jet Fuel, no lube oil, and 0.2 barrels are lost in processing. Notice only Crude #4 can be produced in Unit II both reduces loss and produces Lube Oil. The goal is to maximize profit while crude oil (input) is only available in limited supply and the products (output) each have a limit on maximum demand.\nPortfolio Section Problem\nThis is a basic - single investment at time period 0 - portfolio problem with limits around average length of investment, average risk, average growth potential, and minimum cash requirements. We can use set the variables as the proportion invested in each summing to 1 OR to some arbitrary budget amount to analyze this problem.\nAgriculture Application Problem\nThis problem is somewhat like a blending problem where you have three brands of fertilizer each contributing varying amounts of nitrogen, phosphoric acid, and potash - how many bags of each brand (whole bags only) will satisfy the chemical restrictions and minimize cost?\nMedia Selection Problem The objective is to maximize ad exposures as measured by”audience points” given a limited budget and some investment restrictions. A main concern in this model is to structure the constraints in standard form (linear combination of variables on the left hand side and only a numeric value on the right hand side of the inequalities).\n\n\n\n\n\n\n\nImportant\n\n\n\nMajor takeaways upon viewing these examples\n\nStructure variables, constraint formulas, and objective function\nLearn how to use relative and absolute cell references\nUsing the SUMPRODUCT formula\nLoading the model into Excel Solver\n\nYou will get better at this after completing Homework 1 and 2."
+  },
+  {
+    "objectID": "Opt1/contentW2.html#things-to-do",
+    "href": "Opt1/contentW2.html#things-to-do",
+    "title": "Examples of Linear Programming Problems Using Spreadsheets",
+    "section": "Things to do",
+    "text": "Things to do\nView the asynchronous content before the live session for that week and complete/upload the practice problems (if provided).\n\n\n\n\n\n\nThings to do before Jan 10\n\n\n\n\nView the asynchronous content for Week 2.\nComplete and upload the practice problems (part of Participation grade)\nIf you purchased the Ragsdale book, review the examples in chapters 3. Focus on step 4 in the “construct the model” from the Important note in Week 1.\nPeruse the following sections at Perkins Intro to LP 3.2 The Graphical Solution of Two-Variable Linear Programming Problems 3.7 Short-term Financial Planning 3.9 Production Process Models 3.10 Using Linear Programming to Solve Multiperiod Decision Problems: An Inventory Model 3.11 Multiperiod Financial Models 3.12 Multiperiod Work Scheduling\nTry to setup the example problems for Item 4 in each of these sections using Excel. The examples are in algebraic formulation (which will help when we get to Week 3 and 4)\nBe prepared at the beginning of the live session with any questions, clarifications, or observations you have."
+  },
+  {
+    "objectID": "Opt1/contentW2.html#deliverables-for-next-week",
+    "href": "Opt1/contentW2.html#deliverables-for-next-week",
+    "title": "Examples of Linear Programming Problems Using Spreadsheets",
+    "section": "Deliverables for next week",
+    "text": "Deliverables for next week\n\n\n\n\n\n\nDeliverables for next week\n\n\n\nDownload Homework 2 file. Place your Pepperdine User ID at the beginning of the filename. Upload the completed (or as much as you did) work to the Assessments link at 2pep.\nComplete and upload the practice problems available in the Week 3 asynchronous content.\n\nAll due by midnight PST on Monday, January 16:\n\nSolutions to homework 1 will be available after the deadline. No late work is accepted."
+  },
+  {
+    "objectID": "Opt1/optimization.html",
+    "href": "Opt1/optimization.html",
+    "title": "Course Plan",
+    "section": "",
+    "text": "Access to Learning Management System\n\n\n\nFor those enrolled, this course is available at: 2pep Online Business. The course title is: DESC 622-01OL:2690 Optimization Modeling"
+  },
+  {
+    "objectID": "Opt1/optimization.html#course-description",
+    "href": "Opt1/optimization.html#course-description",
+    "title": "Course Plan",
+    "section": "Course Description",
+    "text": "Course Description\nOptimization problems arise in a multitude of ways as a means of solving problems in engineering design, portfolio design, system management, parameter estimation, statistics, and in the modeling of physical and behavioral phenomena. This is an introductory course in numerical methods for continuous optimization in finite dimensions. Optimization modeling techniques and numerical solution methodology will be applied to a range of important problems in operations, marketing, and finance. The optimization tools that we consider cover much of what is known as mathematical programming. We begin with linear programming and then progress through to nonlinear programming and integer programming."
+  },
+  {
+    "objectID": "Opt1/optimization.html#course-schedule",
+    "href": "Opt1/optimization.html#course-schedule",
+    "title": "Course Plan",
+    "section": "Course Schedule",
+    "text": "Course Schedule\nThere are three phases to the course schedule, basics of LP (weeks 1 and 2), the simplex method (weeks 3 and 4), and network and integer modeling (weeks 6-7). Sensitivity analysis is spread throughout the course.\n\nIntroduction to Modeling and Linear Programming\n\nlive session Jan 3\n\nExamples of Linear Programming Problems Using Spreadsheets\n\nHomework 1 due Jan 9 by midnight\nlive session Jan 10\n\nThe Simplex Method, Part I\n\nHomework 2 due Jan 16 by midnight.\nlive session Jan 17\n\nThe Simplex Method, Part II\n\nHomework 3 due Jan 23 by midnight\nlive session Jan 24\ndistribute Exam 1 (take home)\n\nSpreadsheet Modeling and Sensitivity Analysis\n\nExam 1 due Jan 30 by midnight\nlive session Jan 31\n\nNetwork and Integer modeling\n\nHomework 4 due Feb 6 by midnight\nlive session Feb 7\ndistribute Exam 2 Part 1 (take home)\n\nInteger Programming\n\nHomework 5 due Feb 13 by midnight\nExam 2, Part 1 due Jan 30 by midnight\nlive session Feb 14\n\nlive session will include Exam 2 part 2 in class (one hour) and a course wrap up (30 minutes)"
+  },
+  {
+    "objectID": "Opt1/solutionsEX1.html",
+    "href": "Opt1/solutionsEX1.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsEX2P1.html",
+    "href": "Opt1/solutionsEX2P1.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsHW1.html",
+    "href": "Opt1/solutionsHW1.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsHW2.html",
+    "href": "Opt1/solutionsHW2.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsHW3.html",
+    "href": "Opt1/solutionsHW3.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsHW4.html",
+    "href": "Opt1/solutionsHW4.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Opt1/solutionsHW5.html",
+    "href": "Opt1/solutionsHW5.html",
+    "title": "Optimization Modeling",
+    "section": "",
+    "text": "Will be posted after due date for this assignment"
+  },
+  {
+    "objectID": "Sim1/sim2.html",
+    "href": "Sim1/sim2.html",
     "title": "Sim Page 2",
     "section": "",
     "text": "This is testing a second main page under simulation."
   },
   {
-    "objectID": "simulation.html",
-    "href": "simulation.html",
+    "objectID": "Sim1/simulation.html",
+    "href": "Sim1/simulation.html",
     "title": "Simulation",
     "section": "",
-    "text": "This is just a test to see the side bar."
+    "text": "I am testing subfolders.\n\n\nThis is just a test to see the side bar.\n\n\n\nTesting DIagrams\n\n\n\n\n    flowchart LR\n      A[Hard edge] --> B(Round edge)\n      B --> C{Decision}\n      C --> D[Result one]\n      C --> E[Result two]"
+  },
+  {
+    "objectID": "Sol/index.html#solutions-for-advanced-statistics",
+    "href": "Sol/index.html#solutions-for-advanced-statistics",
+    "title": "Solutions",
+    "section": "Solutions for Advanced Statistics",
+    "text": "Solutions for Advanced Statistics"
+  },
+  {
+    "objectID": "Sol/index.html#solutions-for-simulation-modeling",
+    "href": "Sol/index.html#solutions-for-simulation-modeling",
+    "title": "Solutions",
+    "section": "Solutions for Simulation Modeling",
+    "text": "Solutions for Simulation Modeling"
   }
 ]

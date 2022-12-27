@@ -1,0 +1,7 @@
+---
+title: "The Simplex Method, Part I"
+subtitle: "Week 3 Content"
+number-sections: false
+---
+
+## ![Content will be posted shortly](/images/UnderConstruction.png)

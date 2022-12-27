@@ -1,0 +1,12 @@
+---
+title: "Optimization Modeling"
+subtitle: "Homework 5
+Solution"
+number-sections: false
+---
+
+## Solution to HW1
+
+## 
+
+![Will be posted after due date for this assignment](../images/UnderConstruction.png){alt="Will be posted after due date for this assignment" fig-alt="Homework Solution 1" fig-align="center"}

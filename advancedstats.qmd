@@ -1,6 +1,0 @@
----
-title: "Advanced Statistics"
-editor: visual
----
-
-## Advanced Statistics
