@@ -1,7 +1,7 @@
 project:
   type: website
-  output-dir: _site
-#  output-dir: docs
+#  output-dir: _site
+  output-dir: docs
 
 website:
   title: "Beta Mu Analytics"

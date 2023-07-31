@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Bob McQuaid">
 
-<title>Beta Mu Analytics - Optimization Modeling</title>
+<title>Business Statistics I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Opt1/solutionsHW3.html" rel="next">
-<link href="../Opt1/solutionsHW1.html" rel="prev">
+<link href="../A4BD/BusStat2.html" rel="next">
+<link href="../A4BD/AnalyticsTech.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Anaconda</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../A4BD/HomeA4BD.html" rel="" target="">
+    <a class="nav-link active" href="../A4BD/HomeA4BD.html" rel="" target="" aria-current="page">
  <span class="menu-text">Analytics for Business Decisions</span></a>
   </li>  
   <li class="nav-item">
@@ -100,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Simulation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../Opt1/optimization.html" rel="" target="" aria-current="page"><i class="bi bi-bezier" role="img">
+    <a class="nav-link" href="../Opt1/optimization.html" rel="" target=""><i class="bi bi-bezier" role="img">
 </i> 
  <span class="menu-text">Optimization</span></a>
   </li>  
@@ -129,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Opt1/solutionsHW1.html">Problem Solutions</a></li><li class="breadcrumb-item"><a href="../Opt1/solutionsHW2.html">Homework 2</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../A4BD/AnalyticsTech.html">Content</a></li><li class="breadcrumb-item"><a href="../A4BD/BusStat1.html">Data Types</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -142,18 +162,15 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
- <span class="menu-text">Optimization</span>
-  </li>
-        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/optimization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course Plan</span></a>
+  <a href="../A4BD/HomeA4BD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analytics for Business Decisions</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Content Schedule</span></a>
+ <span class="menu-text">Content</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -161,97 +178,134 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 1</span></a>
+  <a href="../A4BD/AnalyticsTech.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analytics &amp; Technology</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 2</span></a>
+  <a href="../A4BD/BusStat1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Data Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 3</span></a>
+  <a href="../A4BD/BusStat2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Business Statistics II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 4</span></a>
+  <a href="../A4BD/Regress1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 5</span></a>
+  <a href="../A4BD/Regress2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regression II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 6</span></a>
+  <a href="../A4BD/ForePred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting &amp; Prediction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/contentW7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 7</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Problem Solutions</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsHW1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 1</span></a>
+  <a href="../A4BD/DistProb.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Distributions &amp; Probability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsHW2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Homework 2</span></a>
+  <a href="../A4BD/Queue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Queueing Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsHW3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 3</span></a>
+  <a href="../A4BD/SimMdl1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulation I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsHW4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 4</span></a>
+  <a href="../A4BD/SimMdl2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulation II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsHW5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 5</span></a>
+  <a href="../A4BD/DescAnal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsEX1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exam 1</span></a>
+  <a href="../A4BD/ProjMgmt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Management I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Opt1/solutionsEX2P1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exam 2 Part 1</span></a>
+  <a href="../A4BD/ProjMgmt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Management II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/OptMdl1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization Modeling I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/OptMdl2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization Modeling II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/SensAnal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sensitivity Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/NetwMdl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Network Modeling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/IntMdl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integer Modeling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/Simplex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simplex Method</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/ArtIntell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Artificial Intelligence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/Review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A4BD/Final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final</span></a>
   </div>
 </li>
       </ul>
@@ -262,39 +316,75 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link active" data-scroll-target="#data-types"><span class="header-section-number">1</span> Data Types</a></li>
+  <li><a href="#displaying-and-describing-data" id="toc-displaying-and-describing-data" class="nav-link" data-scroll-target="#displaying-and-describing-data"><span class="header-section-number">2</span> Displaying and Describing Data</a>
+  <ul>
+  <li><a href="#categorical" id="toc-categorical" class="nav-link" data-scroll-target="#categorical"><span class="header-section-number">2.1</span> Categorical</a></li>
+  <li><a href="#quantitative" id="toc-quantitative" class="nav-link" data-scroll-target="#quantitative"><span class="header-section-number">2.2</span> Quantitative</a></li>
+  </ul></li>
+  <li><a href="#sampling-and-random-variables" id="toc-sampling-and-random-variables" class="nav-link" data-scroll-target="#sampling-and-random-variables"><span class="header-section-number">3</span> Sampling and Random Variables</a>
+  <ul>
+  <li><a href="#populations-and-parameters" id="toc-populations-and-parameters" class="nav-link" data-scroll-target="#populations-and-parameters"><span class="header-section-number">3.1</span> Populations and Parameters</a></li>
+  <li><a href="#sampling" id="toc-sampling" class="nav-link" data-scroll-target="#sampling"><span class="header-section-number">3.2</span> Sampling</a></li>
+  <li><a href="#random-variables" id="toc-random-variables" class="nav-link" data-scroll-target="#random-variables"><span class="header-section-number">3.3</span> Random Variables</a></li>
+  <li><a href="#common-distributions" id="toc-common-distributions" class="nav-link" data-scroll-target="#common-distributions"><span class="header-section-number">3.4</span> Common Distributions</a></li>
+  </ul></li>
+  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation"><span class="header-section-number">4</span> Point Estimation</a></li>
+  <li><a href="#hypotheses-test---one-and-two-sample" id="toc-hypotheses-test---one-and-two-sample" class="nav-link" data-scroll-target="#hypotheses-test---one-and-two-sample"><span class="header-section-number">5</span> Hypotheses Test - One and Two Sample</a></li>
+  <li><a href="#conidence-intervals---one-and-two-sample" id="toc-conidence-intervals---one-and-two-sample" class="nav-link" data-scroll-target="#conidence-intervals---one-and-two-sample"><span class="header-section-number">6</span> Conidence Intervals - One and Two Sample</a></li>
+  <li><a href="#analysis-of-variance" id="toc-analysis-of-variance" class="nav-link" data-scroll-target="#analysis-of-variance"><span class="header-section-number">7</span> Analysis of Variance</a>
+  <ul>
+  <li><a href="#anova-fixed-effects-models" id="toc-anova-fixed-effects-models" class="nav-link" data-scroll-target="#anova-fixed-effects-models"><span class="header-section-number">7.1</span> ANOVA Fixed Effects Models</a></li>
+  <li><a href="#anova-models-with-random-effects" id="toc-anova-models-with-random-effects" class="nav-link" data-scroll-target="#anova-models-with-random-effects"><span class="header-section-number">7.2</span> ANOVA Models with Random Effects</a></li>
+  <li><a href="#anova-mixed-models" id="toc-anova-mixed-models" class="nav-link" data-scroll-target="#anova-mixed-models"><span class="header-section-number">7.3</span> ANOVA Mixed Models</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Optimization Modeling</h1>
-<p class="subtitle lead">Homework 2 Solution</p>
+
+
+<h2 data-number="1" id="data-types" class="anchored"><span class="header-section-number">1</span> Data Types</h2>
+<p>Source: <span class="citation" data-cites="ShaDevVel2012">[<a href="#ref-ShaDevVel2012" role="doc-biblioref">2</a>]</span></p>
+<h2 data-number="2" id="displaying-and-describing-data" class="anchored"><span class="header-section-number">2</span> Displaying and Describing Data</h2>
+<p>Source: <span class="citation" data-cites="ShaDevVel2012">[<a href="#ref-ShaDevVel2012" role="doc-biblioref">2</a>]</span></p>
+<h3 data-number="2.1" id="categorical" class="anchored"><span class="header-section-number">2.1</span> Categorical</h3>
+<h3 data-number="2.2" id="quantitative" class="anchored"><span class="header-section-number">2.2</span> Quantitative</h3>
+<h2 data-number="3" id="sampling-and-random-variables" class="anchored"><span class="header-section-number">3</span> Sampling and Random Variables</h2>
+<p>Source: <span class="citation" data-cites="RasVerPil2020">[<a href="#ref-RasVerPil2020" role="doc-biblioref">1</a>]</span></p>
+<h3 data-number="3.1" id="populations-and-parameters" class="anchored"><span class="header-section-number">3.1</span> Populations and Parameters</h3>
+<h3 data-number="3.2" id="sampling" class="anchored"><span class="header-section-number">3.2</span> Sampling</h3>
+<h3 data-number="3.3" id="random-variables" class="anchored"><span class="header-section-number">3.3</span> Random Variables</h3>
+<h3 data-number="3.4" id="common-distributions" class="anchored"><span class="header-section-number">3.4</span> Common Distributions</h3>
+<h2 data-number="4" id="point-estimation" class="anchored"><span class="header-section-number">4</span> Point Estimation</h2>
+<p>Source: <span class="citation" data-cites="RasVerPil2020">[<a href="#ref-RasVerPil2020" role="doc-biblioref">1</a>]</span></p>
+<h2 data-number="5" id="hypotheses-test---one-and-two-sample" class="anchored"><span class="header-section-number">5</span> Hypotheses Test - One and Two Sample</h2>
+<p>Source: <span class="citation" data-cites="RasVerPil2020">[<a href="#ref-RasVerPil2020" role="doc-biblioref">1</a>]</span></p>
+<h2 data-number="6" id="conidence-intervals---one-and-two-sample" class="anchored"><span class="header-section-number">6</span> Conidence Intervals - One and Two Sample</h2>
+<p>Source: <span class="citation" data-cites="RasVerPil2020">[<a href="#ref-RasVerPil2020" role="doc-biblioref">1</a>]</span></p>
+<h2 data-number="7" id="analysis-of-variance" class="anchored"><span class="header-section-number">7</span> Analysis of Variance</h2>
+<p>Source: <span class="citation" data-cites="RasVerPil2020">[<a href="#ref-RasVerPil2020" role="doc-biblioref">1</a>]</span></p>
+<h3 data-number="7.1" id="anova-fixed-effects-models" class="anchored"><span class="header-section-number">7.1</span> ANOVA Fixed Effects Models</h3>
+<h3 data-number="7.2" id="anova-models-with-random-effects" class="anchored"><span class="header-section-number">7.2</span> ANOVA Models with Random Effects</h3>
+<h3 data-number="7.3" id="anova-mixed-models" class="anchored"><span class="header-section-number">7.3</span> ANOVA Mixed Models</h3>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-RasVerPil2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Rasch, D. et al. 2020. <em><a href="https://pepperdine.on.worldcat.org/oclc/1097367011">Applied statistics: Theory and problem solutions with <span>R</span></a></em>. <span>Wiley</span>.</div>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/ComingSoon.png" class="img-fluid figure-img" alt="Homework Solution 2"></p>
-<figcaption class="figure-caption">Will be posted after due date for this assignment</figcaption>
-</figure>
+<div id="ref-ShaDevVel2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Sharpe, N.R. et al. 2012. <em>Business <span>Statistics</span>: <span>A First Course</span></em>. <span>Pearson</span>.</div>
 </div>
-
-
-
-</main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -530,13 +620,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Opt1/solutionsHW1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Homework 1</span>
+      <a href="../A4BD/AnalyticsTech.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Analytics &amp; Technology</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Opt1/solutionsHW3.html" class="pagination-link">
-        <span class="nav-page-text">Homework 3</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../A4BD/BusStat2.html" class="pagination-link">
+        <span class="nav-page-text">Business Statistics II</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

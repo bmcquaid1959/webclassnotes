@@ -8,7 +8,7 @@
 
 <meta name="author" content="Bob McQuaid">
 
-<title>Jupyter Qt Console</title>
+<title>Using Navigator</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,6 +31,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../Ana/Environments2.html" rel="next">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,10 +41,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -166,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ana/ScriptingQt.html">Jupyter Qt Console</a></li><li class="breadcrumb-item"><a href="../Ana/ScriptingQt.html">Scripting in the Jupyter Qt Console</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ana/Environments1.html">Environments</a></li><li class="breadcrumb-item"><a href="../Ana/Environments1.html">Using Navigator</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -207,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Ana/Environments1.html" class="sidebar-item-text sidebar-link">
+  <a href="../Ana/Environments1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Using Navigator</span></a>
   </div>
 </li>
@@ -231,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Ana/ScriptingQt.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Ana/ScriptingQt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scripting in the Jupyter Qt Console</span></a>
   </div>
 </li>
@@ -265,20 +232,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#scripting-in-the-jupyter-qt-console" id="toc-scripting-in-the-jupyter-qt-console" class="nav-link active" data-scroll-target="#scripting-in-the-jupyter-qt-console"><span class="header-section-number">1</span> Scripting in the Jupyter Qt Console</a>
+  <li><a href="#using-navigator" id="toc-using-navigator" class="nav-link active" data-scroll-target="#using-navigator"><span class="header-section-number">1</span> Using Navigator</a></li>
+  <li><a href="#basic-concepts" id="toc-basic-concepts" class="nav-link" data-scroll-target="#basic-concepts"><span class="header-section-number">2</span> Basic concepts</a>
   <ul>
-  <li><a href="#seaborn-data-visualization-library" id="toc-seaborn-data-visualization-library" class="nav-link" data-scroll-target="#seaborn-data-visualization-library"><span class="header-section-number">1.1</span> Seaborn Data Visualization Library</a></li>
+  <li><a href="#conda-and-pip" id="toc-conda-and-pip" class="nav-link" data-scroll-target="#conda-and-pip"><span class="header-section-number">2.1</span> Conda and pip</a></li>
   </ul></li>
-  <li><a href="#install-and-launch-jupyter-qt-console-using-navigator" id="toc-install-and-launch-jupyter-qt-console-using-navigator" class="nav-link" data-scroll-target="#install-and-launch-jupyter-qt-console-using-navigator"><span class="header-section-number">2</span> Install and Launch Jupyter Qt Console Using Navigator</a></li>
-  <li><a href="#qt-console-controls" id="toc-qt-console-controls" class="nav-link" data-scroll-target="#qt-console-controls"><span class="header-section-number">3</span> Qt Console Controls</a>
+  <li><a href="#creating-a-new-environment" id="toc-creating-a-new-environment" class="nav-link" data-scroll-target="#creating-a-new-environment"><span class="header-section-number">3</span> Creating a New Environment</a></li>
+  <li><a href="#managing-packages" id="toc-managing-packages" class="nav-link" data-scroll-target="#managing-packages"><span class="header-section-number">4</span> Managing Packages</a>
   <ul>
-  <li><a href="#syntax-style" id="toc-syntax-style" class="nav-link" data-scroll-target="#syntax-style"><span class="header-section-number">3.1</span> Syntax Style</a></li>
-  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts" class="nav-link" data-scroll-target="#keyboard-shortcuts"><span class="header-section-number">3.2</span> Keyboard Shortcuts</a>
-  <ul>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">3.2.1</span> Running code</a></li>
+  <li><a href="#find-and-install-packages" id="toc-find-and-install-packages" class="nav-link" data-scroll-target="#find-and-install-packages"><span class="header-section-number">4.1</span> Find and Install Packages</a></li>
+  <li><a href="#additional-packages" id="toc-additional-packages" class="nav-link" data-scroll-target="#additional-packages"><span class="header-section-number">4.2</span> Additional Packages</a></li>
+  <li><a href="#updating-and-removing-packages" id="toc-updating-and-removing-packages" class="nav-link" data-scroll-target="#updating-and-removing-packages"><span class="header-section-number">4.3</span> Updating and Removing Packages</a></li>
   </ul></li>
-  <li><a href="#tabs-and-kernels" id="toc-tabs-and-kernels" class="nav-link" data-scroll-target="#tabs-and-kernels"><span class="header-section-number">3.3</span> Tabs and Kernels</a></li>
-  </ul></li>
+  <li><a href="#duplicating-environments" id="toc-duplicating-environments" class="nav-link" data-scroll-target="#duplicating-environments"><span class="header-section-number">5</span> Duplicating Environments</a></li>
+  <li><a href="#backing-up-environments" id="toc-backing-up-environments" class="nav-link" data-scroll-target="#backing-up-environments"><span class="header-section-number">6</span> Backing up Environments</a></li>
+  <li><a href="#removing-environments" id="toc-removing-environments" class="nav-link" data-scroll-target="#removing-environments"><span class="header-section-number">7</span> Removing Environments</a></li>
   </ul>
 </nav>
     </div>
@@ -287,149 +255,183 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<h2 data-number="1" id="scripting-in-the-jupyter-qt-console" class="anchored"><span class="header-section-number">1</span> Scripting in the Jupyter Qt Console</h2>
-<p>The <a href="https://qtconsole.readthedocs.io/en/stable/index.html">Jupyter Qt Console</a> blends the simplicity of a terminal with features of a GUI to quickly test ideas, explore datasets, and work through tutorials. The interface is not intended for extended interactive use, but includes line numbers, multiple tabs, rich media output, command history retrieval across sessions, multiline editing, syntax highlighting, session export, and more.</p>
-<p>There is a pretty <a href="https://www.tutorialspoint.com/jupyter/jupyter_qtconsole_getting_started.htm">quick tutorial</a> available if you wish to practice a bit after completing this section.</p>
-<h3 data-number="1.1" id="seaborn-data-visualization-library" class="anchored"><span class="header-section-number">1.1</span> Seaborn Data Visualization Library</h3>
-<p>Viewing plots in the QtConsole requires installation of the seaborn data visualization library. We’ll use <strong>my_first_env</strong> environment during this section.</p>
+<h2 data-number="1" id="using-navigator" class="anchored"><span class="header-section-number">1</span> Using Navigator</h2>
+<p>Each Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Conda Navigator</p>
+<h2 data-number="2" id="basic-concepts" class="anchored"><span class="header-section-number">2</span> Basic concepts</h2>
+<p>Each environment is like a separate Python installation and is simply a dedicated directory on your system. A package manager ensures the directory contains the appropriate versions based on the latest stable available or what you specify. It also finds and loads all the appropriate dependencies for these versions. This system is particularly effective in a production environment where you may be working on multiple projects from with different programmers or on legacy systems that use older package versions. You can view the directory where your packages are stored by opening <strong>cmd.exe Prompt</strong> in the Navigator and enter <code>conda info</code>.</p>
+<p>The base environment is installed when you install Anaconda and includes Python and core libraries and dependencies of conda. Generally, create a new environment for each project and install additional packages by project - not in the base.</p>
+<h3 data-number="2.1" id="conda-and-pip" class="anchored"><span class="header-section-number">2.1</span> Conda and pip</h3>
+<p>Some packages, not available through Navigator, must be installed using pip (Python management system) which is available in each environment and installs packages from PyPI. However, for projects requiring the use of pip, it is best to create the environment by proceeding:</p>
 <ol type="1">
-<li>In Navigator, make the <strong>my_first_env</strong> environment as the active environment.</li>
-<li>Select <strong>Not Installed</strong> in the package dropdown menu</li>
-<li>Enter <code>seaborn</code> in the package search field</li>
-<li>Select the check box <i class="fa-solid fa-square-check" aria-label="square-check"></i> next to the seaborn package.</li>
-<li>Select the <strong>Apply</strong> button at the bottom of the panel.</li>
-<li>When the “Install packages” window pops up, select <strong>Apply</strong> in that window to install seaborn and required dependencies (there may be many).</li>
+<li>Install packages using conda navigator first.</li>
+<li>Install packages needing pip.</li>
+<li>Don’t run pip in the base environment.</li>
+<li>If changes are needed in the new project, recreate the environment in order of 1 and 2 again.</li>
+<li>Document the conda and pip requirements in an environment text file (discussed later).</li>
 </ol>
-<h2 data-number="2" id="install-and-launch-jupyter-qt-console-using-navigator" class="anchored"><span class="header-section-number">2</span> Install and Launch Jupyter Qt Console Using Navigator</h2>
+<h2 data-number="3" id="creating-a-new-environment" class="anchored"><span class="header-section-number">3</span> Creating a New Environment</h2>
 <ol type="1">
-<li>Select the Home <i class="fa-solid fa-home" aria-label="home"></i> tab in Navigator.</li>
-<li>Select <strong>my_first_env</strong> in the dropdown to identify the environment in which to install <strong>Qt Console</strong>.</li>
-<li>Select the <strong>Install</strong> button on the <strong>Qt Console</strong> tile.
+<li>Open Anaconda Navigator desktop app.</li>
+<li>Select the <strong>Environments</strong> tab and select the <strong>Create</strong> button (bottom of panel). In the pop-up window, enter <code>my_first_env</code> in the <strong>New environment name</strong> field.</li>
+<li>Select <strong>Create</strong> in that window.</li>
+<li>The new environment appears as the now <em>active</em> environment. In the package dropdown list, select <strong>Installed</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+the <em>envs</em> folder
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The name you enter will be a sub-folder in the <em>envs</em> folder within your Anaconda installation. Therefore, each environment must have unique names. The version of Python in that environment defaults to the most recent stable version of Python available; earlier versions are available in case you want to use one.</p>
+</div>
+</div>
+<h2 data-number="4" id="managing-packages" class="anchored"><span class="header-section-number">4</span> Managing Packages</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Working in the <strong>active</strong> environment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Whatever environment you have selected as <strong>active</strong> is where new packages are installed, updated, or removed. Make sure that when managing packages, you have selected your desired environment.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>For the remainder of this page, we will be working in <code>my_first_env</code> so make sure you select it before performing these operations.</p>
+</blockquote>
+<h3 data-number="4.1" id="find-and-install-packages" class="anchored"><span class="header-section-number">4.1</span> Find and Install Packages</h3>
+<p>Select the <strong>Environments</strong> tab and select the <code>my_first_env</code> environment. The currently installed packages appear in the panel to the right. There is a dropdown list above the packages with the following options:</p>
 <ul>
-<li><em>Ignore</em> the package named <em>jupyter console</em> as it does not include graphics capability.</li>
-<li>If no <strong>Qt Console</strong> package is available on the Home <i class="fa-solid fa-home" aria-label="home"></i> tab, then it has not been installed yet.
-<ol type="i">
-<li>In Navigator, select the <i class="fa-solid fa-cube" aria-label="cube"></i> Environment tab and make the <strong>my_first_env</strong> environment as the active environment.</li>
-<li>Select <strong>Not Installed</strong> in the package dropdown menu</li>
-<li>Enter <code>qtconsole</code> in the package search field</li>
-<li>Select the check box <i class="fa-solid fa-square-check" aria-label="square-check"></i> next to the <strong>qtconsole</strong> package.</li>
-<li>Select the <strong>Apply</strong> button at the bottom of the panel.</li>
-<li>When the “Install packages” window pops up, select <strong>Apply</strong> in that window to install seaborn and required dependencies (there may be many).</li>
-<li>Return to the <i class="fa-solid fa-home" aria-label="home"></i> Home tab, select the <i class="fa-solid fa-rotate-right" aria-label="rotate-right"></i> Refresh button. Complete steps 1-2 above.</li>
-</ol></li>
-<li>If <strong>Qt console</strong> still does not appear in a tile,
-<ol type="i">
-<li>Return to the Environments tab and select the <i class="fa-solid fa-circle-chevron-right" aria-label="circle-chevron-right"></i> button for the <strong>my_first_env</strong> environment and select <strong>Open Terminal</strong>.</li>
-<li>Enter <code>conda install qtconsole</code></li>
-<li>Review the messages returned, if it warns you to upgrade, enter <code>conda update -n base -c defaults conda</code></li>
-<li>There will be a lengthy message to upgrade, downgrade, and remove packages below which you will need to enter <code>y</code> at the **Proceed? ([y],n) prompt.</li>
-<li>You may get a verification error, but the installation was likely successful.</li>
-</ol></li>
+<li>Installed
+<ul>
+<li>you can scroll to view or “Search Packages” by typing part of the package name to limit options. In my case <code>my_first_env</code> environment had 18 packages installed.</li>
 </ul></li>
-<li>Launch Jupyter Qt Console
-<ol type="i">
-<li>Return to the Environments tab and select the <i class="fa-solid fa-circle-chevron-right" aria-label="circle-chevron-right"></i> button for the <strong>my_first_env</strong> environment and select <strong>Open Terminal</strong>.</li>
-<li>Enter <code>jupyter qtconsole</code> and hit enter.</li>
-<li>Input <code>5 * 2 + (10 / 2)</code> adjacent to the <strong>In [1]:</strong> and Enter. The result should say <span style="color:red"><strong>Out[1]:</strong></span> 15.0**.</li>
-</ol></li>
-</ol>
-<h2 data-number="3" id="qt-console-controls" class="anchored"><span class="header-section-number">3</span> Qt Console Controls</h2>
-<h3 data-number="3.1" id="syntax-style" class="anchored"><span class="header-section-number">3.1</span> Syntax Style</h3>
-<p>The console provides color-coding for various elements like the <strong>In</strong> and <span style="color:red"><strong>Out</strong></span> called <em>syntax highlighting</em>. You can choose from a large number of style types by selecting <strong>View</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>Syntax Style</strong> at your discretion.</p>
-<p>Open a new tab by selecting <strong>File</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>New Tab with New kernel</strong>. You can rename the tab by entering <strong>Window</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>Rename Current Tab</strong>. You can choose a different syntax style on each tab if you wish. That can be helpful when experimenting with different codes.</p>
-<h3 data-number="3.2" id="keyboard-shortcuts" class="anchored"><span class="header-section-number">3.2</span> Keyboard Shortcuts</h3>
-<p>Keyboard shortcuts (or <em>keybindings</em>) such as <kbd>Ctrl-C</kbd> for copy are available at <strong>Help</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>QtConsole help</strong> under the <strong>Key bindings</strong> heading.</p>
-<p>The box below contains a list of these, some you will use all the time, others you may not use at all.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<li>Not Installed
+<ul>
+<li>you can scroll to view or “Search Packages” by typing part of the package name to limit options. There is likely a large list of not installed packages available.</li>
+</ul></li>
+<li>Updatable</li>
+<li>Selected</li>
+<li>All</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Key Bindings
+Using the “Search Packages” causes dropdown list to disappear
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ul>
-<li><kbd>Ctrl-c</kbd> copy highlighted text to clipboard (prompts are automatically stripped).</li>
-<li><kbd>Ctrl-Shft-C</kbd> copy highlighted text to clipboard (prompts are not stripped).</li>
-<li><kbd>Ctrl-v</kbd> paste text from clipboard.</li>
-<li><kbd>Ctrl-z</kbd> undo (retrieves lost text if you move out of a cell with the arrows).</li>
-<li><kbd>Ctrl-Shft-Z</kbd> redo.</li>
-<li><kbd>Ctrl-l</kbd> clear terminal.</li>
-<li></li>
-<li><kbd>Ctrl-a</kbd> go to beginning of line.</li>
-<li><kbd>Ctrl-e</kbd> go to end of line.</li>
-<li><kbd>Ctrl-p</kbd> previous line (like up arrow)</li>
-<li><kbd>Ctrl-n</kbd> next line (like down arrow)</li>
-<li><kbd>Ctrl-f</kbd> forward (like right arrow)</li>
-<li><kbd>Ctrl-b</kbd> back (like left arrow)</li>
-<li><kbd>Alt-&lt;</kbd> move to the beginning of the input region.</li>
-<li><kbd>Alt-&gt;</kbd> move to the end of the input region.</li>
-<li></li>
-<li><kbd>Ctrl-y</kbd> yank (paste)</li>
-<li><kbd>Ctrl-d</kbd> delete next character, or exits if input is empty</li>
-<li><kbd>Alt-d</kbd> delete next word.</li>
-<li><kbd>Alt-backspace</kbd>: delete previous word.</li>
-<li><kbd>Ctrl-+</kbd> increase font size.</li>
-<li><kbd>Ctrl–</kbd> decrease font size.</li>
-<li></li>
-<li><kbd>Ctrl-.</kbd> force a kernel restart (a confirmation dialog appears).</li>
-<li></li>
-<li><kbd>Ctrl-Alt-space</kbd> toggle full screen. (Command-Control-Space on Mac OS X)</li>
-<li><kbd>Ctrl-o</kbd> move to ‘other’ area, between pager and terminal.</li>
-<li><kbd>Ctrl-u</kbd> kill from cursor to the begining of the line.</li>
-<li><kbd>Ctrl-k</kbd> kill from cursor to the end of the line.</li>
-</ul>
+<p>If you type in the “Search Packages” field and then change the dropdown between Installed and Not Installed or change the active Environment, the package list may disappear. You simply need to clear the “Search Packages” field and the package list will reappear correctly.</p>
 </div>
 </div>
-</div>
-<h4 data-number="3.2.1" id="running-code" class="anchored"><span class="header-section-number">3.2.1</span> Running code</h4>
-<p>When typing code in the console, the code on that line will execute if you select <kbd>Enter</kbd> unless you are working on a multi-line script.</p>
-<p>A multi-line script can be input by selecting <kbd>Ctrl-Enter</kbd> after typing the first line of code. Each line input after which you insert a new line by selecting <kbd>Ctrl-Enter</kbd>. Once you’ve input all lines of code, select <kbd>Shft-Enter</kbd> to execute the script.</p>
-<p><strong>Basics</strong></p>
+<h3 data-number="4.2" id="additional-packages" class="anchored"><span class="header-section-number">4.2</span> Additional Packages</h3>
+<p>Additional packages are available by a number of different independent providers and contributors. You can access these channels by adding a <strong>Channel</strong>. Select the <strong>Channel</strong> button next to the packages dropdown list and enter the channel you wish to add. For example, the <a href="https://conda-forge.org/docs/">conda-forge</a> community has thousands of contributors who provide packages. To add their channel,</p>
 <ol type="1">
-<li><kbd>Enter</kbd> <em>execute</em> single line</li>
-<li><kbd>Ctrl-Enter</kbd> <em>force</em> new line, <em>never</em> causes execution.</li>
-<li><kbd>Shft-Enter</kbd> <em>force</em> execution regardless of where cursor is, no newline added.</li>
+<li>Select the <strong>Channel</strong> button</li>
+<li>Click the <strong>Add</strong> button</li>
+<li>Enter <code>conda-forge</code> in the channel name field and <kbd>Enter</kbd></li>
+<li>Select the <strong>Update channels</strong> button</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<p>Select <strong>All</strong> in the packages dropdown list. The number of packages available (shown at the bottom of Navigator) likely increased (mine went from 9,675 to over 25,000). You can remove a channel by returning to the <strong>Channel</strong> button and selecting the trash can (<i class="fa-solid fa-trash-can" aria-label="trash-can"></i>) icon adjacent to the channel you wish to delete.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Practice running multiline code in Qt Console
+Practice adding a package to the base environment
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Practice inputting the code shown below <em>one line at a time</em>.</p>
+<p><a href="https://simpy.readthedocs.io/en/latest/index.html">SimPy</a> is a process-based discrete-event simulation framework based on standard Python. Let’s add it to the base environment in Navigator.</p>
+<ol type="1">
+<li>Select the <strong>Environments</strong> tab and select the <strong>my_first_env</strong> environment in the left navigation panel.</li>
+<li>In the package dropdown list select <strong>Installed</strong> and type <code>SimPy</code> in the <strong>Package Search</strong> field. It is very likely the list will be empty (unless you added SimPy previously).</li>
+<li>Leave <code>SimPy</code> in the <strong>Package Search</strong> field and select <strong>Not installed</strong> in the package dropdown list. You may see more than one package available, but we are only interested in the one simply titled “SimPy.”</li>
+<li>Select the checkbox (<i class="fa-solid fa-square-check" aria-label="square-check"></i>) icon next to the SimPy package</li>
+<li>Select the <strong>Apply</strong> button at the bottom of the Navigator panel.</li>
+</ol>
+<p>In a few moments, an “Install Packages” window will appear listing the SimPy package added as well as any packages on which SimPy depends to be added or modified to the <strong>my_first_env</strong> environment . Select the <strong>Apply</strong> button in that window to complete the process.</p>
+<ol start="6" type="1">
+<li>Select <strong>Installed</strong> in the package dropdown list and you will see “simpy” has been installed. Clear the <strong>Package Search</strong> field and your <strong>Installed</strong> list has increased to 19 packages.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The “<strong>-base</strong>” packages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Can cause confusion: there is a difference between</p>
 <ul>
-<li>After inputting each line, select <kbd>Ctrl-Enter</kbd></li>
-<li>Make sure to include the semi-colon (;) only at the end of the last line</li>
-<li>After inputting the semi-colon on the last line, select <kbd>Shft-Enter</kbd></li>
+<li>the <strong>base</strong> environment when you first install Anaconda, and</li>
+<li><strong>-base</strong> versions of most major packages</li>
 </ul>
-<p>The output should be four line graphs of Density vs tip for each day in the dataset. You can save this as an HTML file and open the code and graphs in a browser.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">'tips'</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ordered_days <span class="op">=</span> tips.day.value_counts().index</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> sns.FacetGrid(tips, row<span class="op">=</span><span class="st">'day'</span>, row_order<span class="op">=</span>ordered_days, height <span class="fl">1.5</span>, aspect <span class="op">=</span> <span class="dv">4</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>chart.<span class="bu">map</span>(sns.kdeplot, <span class="st">'tips'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Major libraries often appear duplicated. For example, select the <strong>Environments</strong> tab <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> the <strong>base</strong> environment <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <strong>Installed</strong> in the package dropdown list and type <code>matplotlib</code> in the <strong>Package Search</strong> field. There may be more, but note a <strong>matplotlib</strong> and <strong>matplotlib-base</strong> are identified. The <strong>-base</strong> packages tend to be lighter versions (less functional) loaded when installing other packages that depend on the main package.</p>
+<p>The <strong>base</strong> environment and packages versions with a <strong>-base</strong> suffix are two completely different things.</p>
 </div>
 </div>
-</div>
-<h3 data-number="3.3" id="tabs-and-kernels" class="anchored"><span class="header-section-number">3.3</span> Tabs and Kernels</h3>
-<p>A kernel is the active “computational engine” that executes code. When you add a new tab you have three options for the kernel</p>
+<h3 data-number="4.3" id="updating-and-removing-packages" class="anchored"><span class="header-section-number">4.3</span> Updating and Removing Packages</h3>
+<p>It is common for newer versions of installed packages to become available over time. To see what newer versions of installed packages are available,</p>
+<ol type="1">
+<li>Select the <strong>Environments</strong> tab and the <strong>my_first_env</strong> environment</li>
+<li>In the package dropdown list, select <strong>Updatable</strong>. The number in your list may vary from others - be short or very long (in my case, there were 282 updatable packages in the <strong>base</strong> environment and 2 in the <strong>my_first_env</strong> environment).</li>
+<li>If you have any <strong>Updatable</strong> packages in <strong>my_first_env</strong> environment, select each one and <strong>mark for update</strong> in the pop-up and select <strong>Apply</strong> at the bottom of the Navigator panel.</li>
+</ol>
+<p>In a few moments, an “Update Packages” window will appear. In <strong>my_first_env</strong> environment, it lists two packages in need of update. For reference, in my <strong>base</strong> environment it states,</p>
+<blockquote class="blockquote">
+<p>384 packages will be modified 44 packages will be removed 45 packages will be installed</p>
+</blockquote>
+<p>Select the <strong>Apply</strong> button in that window to complete the process. Depending on the number of packages affected, this may take a while. In <strong>my_first_env</strong> environment, when I try to update them, the messages states, “<em>All requested packages are already installed.</em>” Annoying, but not a problem.</p>
+<p>In my <strong>base</strong> environment, I tried to update the <strong>Python</strong> package and received an error. If you get an error, the process will fail to install any packages at this time. More annoying, but still not a major problem. Generally, you can use <strong>pip</strong> to install these packages (discussed later).</p>
+<p>Finally, if you need to update a large number of packages, this method would be quite painful. Later, using a terminal window to update all packages in an environment will be discussed. Basically, you select the green arrow adjacent to the name of the environment, select “Open Terminal”, and type <code>conda update --all</code> (details later).</p>
+<h2 data-number="5" id="duplicating-environments" class="anchored"><span class="header-section-number">5</span> Duplicating Environments</h2>
+<p>Once we have a working environment, we often wish to use it on a different project. We can duplicate an environment in one of two ways:</p>
 <ul>
-<li><strong>New tab with new kernel</strong>: Opens a new tab with a new IPython kernel</li>
-<li><strong>New tab with same kernel</strong>: Creates a child of a parent kernel loaded on a particular tab. Objects initialized on the parent tab are accessible in both tabs.</li>
-<li><strong>New tab with existing kernel</strong>: Opens a new tab and lets you choose from kernels other than IPython.</li>
+<li>Clone
+<ul>
+<li>Select the environment, select <strong>Clone</strong> at the bottom of the pane, enter a name for the new environment.</li>
+</ul></li>
+<li>Import
+<ul>
+<li>This process opens an Environment file previously created which lists all the packages and versions in an environment. This is done using the Command Line Interface (CLI) by activating an environment and then exporting the list to a YAML file (discussed later).</li>
+</ul></li>
 </ul>
-<p>The first two are the most common. The <strong>New tab with same kernel</strong> is convenient if you are investigating alternative scripts or writing functions.</p>
+<h2 data-number="6" id="backing-up-environments" class="anchored"><span class="header-section-number">6</span> Backing up Environments</h2>
+<p>Sometimes we backup a environment to create a checkpoint for work so far, keep a copy for disaster recovery, or migrate between machines. You can backup to your local machine or to Anaconda Cloud. Select the <strong>Backup</strong> button at the bottom of the pane while the desired environment is selected.</p>
+<h2 data-number="7" id="removing-environments" class="anchored"><span class="header-section-number">7</span> Removing Environments</h2>
+<p>Select the environment to remove and select the <strong>Remove</strong> button at the bottom of the pane. It’s a good practice to create an environment file before removing an environment in case you wish to recreate it later.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avoid Data Loss
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you remove an environment, it’s entire folder is deleted including any data stored in that folder. It is good practice to keep data in separate folders than the environment folder.</p>
+</div>
+</div>
 
 
 
@@ -667,6 +669,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Ana/Environments2.html" class="pagination-link">
+        <span class="nav-page-text">Using Command Line Interface</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
