@@ -1,7 +1,7 @@
 project:
   type: website
-#  output-dir: _site
-  output-dir: docs
+  output-dir: _site
+#  output-dir: docs
 
 website:
   title: "Beta Mu Analytics"
@@ -15,7 +15,7 @@ website:
       - text: "Home"
         file: index.qmd
       - text: "Anaconda"
-        file: Ana/GettingStarted.qmd
+        file: Ana/Installation.qmd
       - text: "Analytics for Business Decisions"
         file: A4BD/HomeA4BD.qmd
       - text: "Simulation"
