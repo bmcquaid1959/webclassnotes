@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Bob McQuaid">
+
+<title>Using Navigator</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Ana/Environments2.html" rel="next">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Beta Mu Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Ana/GettingStarted.qmd" rel="" target="">
+ <span class="menu-text">Anaconda</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../A4BD/HomeA4BD.html" rel="" target="">
+ <span class="menu-text">Analytics for Business Decisions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Sim1/simulation.html" rel="" target=""><i class="bi bi-sliders" role="img">
+</i> 
+ <span class="menu-text">Simulation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Opt1/optimization.html" rel="" target=""><i class="bi bi-bezier" role="img">
+</i> 
+ <span class="menu-text">Optimization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../AdvStats1/advancedstats.html" rel="" target=""><i class="bi bi-pie-chart" role="img">
+</i> 
+ <span class="menu-text">Advanced Statistics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Sol/index.html" rel="" target=""><i class="bi bi-patch-question" role="img">
+</i> 
+ <span class="menu-text">Solutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ana/Environments1.html">Environments</a></li><li class="breadcrumb-item"><a href="../Ana/Environments1.html">Using Navigator</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Installation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download and install</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Environments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Environments1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Using Navigator</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Environments2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Command Line Interface</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Jupyter Qt Console</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-navigator" id="toc-using-navigator" class="nav-link active" data-scroll-target="#using-navigator"><span class="header-section-number">1</span> Using Navigator</a></li>
+  <li><a href="#basic-concepts" id="toc-basic-concepts" class="nav-link" data-scroll-target="#basic-concepts"><span class="header-section-number">2</span> Basic concepts</a>
+  <ul>
+  <li><a href="#conda-and-pip" id="toc-conda-and-pip" class="nav-link" data-scroll-target="#conda-and-pip"><span class="header-section-number">2.1</span> Conda and pip</a></li>
+  </ul></li>
+  <li><a href="#creating-a-new-environment" id="toc-creating-a-new-environment" class="nav-link" data-scroll-target="#creating-a-new-environment"><span class="header-section-number">3</span> Creating a New Environment</a></li>
+  <li><a href="#managing-packages" id="toc-managing-packages" class="nav-link" data-scroll-target="#managing-packages"><span class="header-section-number">4</span> Managing Packages</a>
+  <ul>
+  <li><a href="#find-and-install-packages" id="toc-find-and-install-packages" class="nav-link" data-scroll-target="#find-and-install-packages"><span class="header-section-number">4.1</span> Find and Install Packages</a></li>
+  <li><a href="#additional-packages" id="toc-additional-packages" class="nav-link" data-scroll-target="#additional-packages"><span class="header-section-number">4.2</span> Additional Packages</a></li>
+  <li><a href="#updating-and-removing-packages" id="toc-updating-and-removing-packages" class="nav-link" data-scroll-target="#updating-and-removing-packages"><span class="header-section-number">4.3</span> Updating and Removing Packages</a></li>
+  </ul></li>
+  <li><a href="#duplicating-environments" id="toc-duplicating-environments" class="nav-link" data-scroll-target="#duplicating-environments"><span class="header-section-number">5</span> Duplicating Environments</a></li>
+  <li><a href="#backing-up-environments" id="toc-backing-up-environments" class="nav-link" data-scroll-target="#backing-up-environments"><span class="header-section-number">6</span> Backing up Environments</a></li>
+  <li><a href="#removing-environments" id="toc-removing-environments" class="nav-link" data-scroll-target="#removing-environments"><span class="header-section-number">7</span> Removing Environments</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<h2 data-number="1" id="using-navigator" class="anchored"><span class="header-section-number">1</span> Using Navigator</h2>
+<p>Each Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Conda Navigator</p>
+<h2 data-number="2" id="basic-concepts" class="anchored"><span class="header-section-number">2</span> Basic concepts</h2>
+<p>Each environment is like a separate Python installation and is simply a dedicated directory on your system. A package manager ensures the directory contains the appropriate versions based on the latest stable available or what you specify. It also finds and loads all the appropriate dependencies for these versions. This system is particularly effective in a production environment where you may be working on multiple projects from with different programmers or on legacy systems that use older package versions. You can view the directory where your packages are stored by opening <strong>cmd.exe Prompt</strong> in the Navigator and enter <code>conda info</code>.</p>
+<p>The base environment is installed when you install Anaconda and includes Python and core libraries and dependencies of conda. Generally, create a new environment for each project and install additional packages by project - not in the base.</p>
+<h3 data-number="2.1" id="conda-and-pip" class="anchored"><span class="header-section-number">2.1</span> Conda and pip</h3>
+<p>Some packages, not available through Navigator, must be installed using pip (Python management system) which is available in each environment and installs packages from PyPI. However, for projects requiring the use of pip, it is best to create the environment by proceeding:</p>
+<ol type="1">
+<li>Install packages using conda navigator first.</li>
+<li>Install packages needing pip.</li>
+<li>Don’t run pip in the base environment.</li>
+<li>If changes are needed in the new project, recreate the environment in order of 1 and 2 again.</li>
+<li>Document the conda and pip requirements in an environment text file (discussed later).</li>
+</ol>
+<h2 data-number="3" id="creating-a-new-environment" class="anchored"><span class="header-section-number">3</span> Creating a New Environment</h2>
+<ol type="1">
+<li>Open Anaconda Navigator desktop app.</li>
+<li>Select the <strong>Environments</strong> tab and select the <strong>Create</strong> button (bottom of panel). In the pop-up window, enter <code>my_first_env</code> in the <strong>New environment name</strong> field.</li>
+<li>Select <strong>Create</strong> in that window.</li>
+<li>The new environment appears as the now <em>active</em> environment. In the package dropdown list, select <strong>Installed</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+the <em>envs</em> folder
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The name you enter will be a sub-folder in the <em>envs</em> folder within your Anaconda installation. Therefore, each environment must have unique names. The version of Python in that environment defaults to the most recent stable version of Python available; earlier versions are available in case you want to use one.</p>
+</div>
+</div>
+<h2 data-number="4" id="managing-packages" class="anchored"><span class="header-section-number">4</span> Managing Packages</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Working in the <strong>active</strong> environment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Whatever environment you have selected as <strong>active</strong> is where new packages are installed, updated, or removed. Make sure that when managing packages, you have selected your desired environment.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>For the remainder of this page, we will be working in <code>my_first_env</code> so make sure you select it before performing these operations.</p>
+</blockquote>
+<h3 data-number="4.1" id="find-and-install-packages" class="anchored"><span class="header-section-number">4.1</span> Find and Install Packages</h3>
+<p>Select the <strong>Environments</strong> tab and select the <code>my_first_env</code> environment. The currently installed packages appear in the panel to the right. There is a dropdown list above the packages with the following options:</p>
+<ul>
+<li>Installed
+<ul>
+<li>you can scroll to view or “Search Packages” by typing part of the package name to limit options. In my case <code>my_first_env</code> environment had 18 packages installed.</li>
+</ul></li>
+<li>Not Installed
+<ul>
+<li>you can scroll to view or “Search Packages” by typing part of the package name to limit options. There is likely a large list of not installed packages available.</li>
+</ul></li>
+<li>Updatable</li>
+<li>Selected</li>
+<li>All</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Using the “Search Packages” causes dropdown list to disappear
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you type in the “Search Packages” field and then change the dropdown between Installed and Not Installed or change the active Environment, the package list may disappear. You simply need to clear the “Search Packages” field and the package list will reappear correctly.</p>
+</div>
+</div>
+<h3 data-number="4.2" id="additional-packages" class="anchored"><span class="header-section-number">4.2</span> Additional Packages</h3>
+<p>Additional packages are available by a number of different independent providers and contributors. You can access these channels by adding a <strong>Channel</strong>. Select the <strong>Channel</strong> button next to the packages dropdown list and enter the channel you wish to add. For example, the <a href="https://conda-forge.org/docs/">conda-forge</a> community has thousands of contributors who provide packages. To add their channel,</p>
+<ol type="1">
+<li>Select the <strong>Channel</strong> button</li>
+<li>Click the <strong>Add</strong> button</li>
+<li>Enter <code>conda-forge</code> in the channel name field and <kbd>Enter</kbd></li>
+<li>Select the <strong>Update channels</strong> button</li>
+</ol>
+<p>Select <strong>All</strong> in the packages dropdown list. The number of packages available (shown at the bottom of Navigator) likely increased (mine went from 9,675 to over 25,000). You can remove a channel by returning to the <strong>Channel</strong> button and selecting the trash can (<i class="fa-solid fa-trash-can" aria-label="trash-can"></i>) icon adjacent to the channel you wish to delete.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice adding a package to the base environment
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://simpy.readthedocs.io/en/latest/index.html">SimPy</a> is a process-based discrete-event simulation framework based on standard Python. Let’s add it to the base environment in Navigator.</p>
+<ol type="1">
+<li>Select the <strong>Environments</strong> tab and select the <strong>my_first_env</strong> environment in the left navigation panel.</li>
+<li>In the package dropdown list select <strong>Installed</strong> and type <code>SimPy</code> in the <strong>Package Search</strong> field. It is very likely the list will be empty (unless you added SimPy previously).</li>
+<li>Leave <code>SimPy</code> in the <strong>Package Search</strong> field and select <strong>Not installed</strong> in the package dropdown list. You may see more than one package available, but we are only interested in the one simply titled “SimPy.”</li>
+<li>Select the checkbox (<i class="fa-solid fa-square-check" aria-label="square-check"></i>) icon next to the SimPy package</li>
+<li>Select the <strong>Apply</strong> button at the bottom of the Navigator panel.</li>
+</ol>
+<p>In a few moments, an “Install Packages” window will appear listing the SimPy package added as well as any packages on which SimPy depends to be added or modified to the <strong>my_first_env</strong> environment . Select the <strong>Apply</strong> button in that window to complete the process.</p>
+<ol start="6" type="1">
+<li>Select <strong>Installed</strong> in the package dropdown list and you will see “simpy” has been installed. Clear the <strong>Package Search</strong> field and your <strong>Installed</strong> list has increased to 19 packages.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The “<strong>-base</strong>” packages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Can cause confusion: there is a difference between</p>
+<ul>
+<li>the <strong>base</strong> environment when you first install Anaconda, and</li>
+<li><strong>-base</strong> versions of most major packages</li>
+</ul>
+<p>Major libraries often appear duplicated. For example, select the <strong>Environments</strong> tab <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> the <strong>base</strong> environment <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <strong>Installed</strong> in the package dropdown list and type <code>matplotlib</code> in the <strong>Package Search</strong> field. There may be more, but note a <strong>matplotlib</strong> and <strong>matplotlib-base</strong> are identified. The <strong>-base</strong> packages tend to be lighter versions (less functional) loaded when installing other packages that depend on the main package.</p>
+<p>The <strong>base</strong> environment and packages versions with a <strong>-base</strong> suffix are two completely different things.</p>
+</div>
+</div>
+<h3 data-number="4.3" id="updating-and-removing-packages" class="anchored"><span class="header-section-number">4.3</span> Updating and Removing Packages</h3>
+<p>It is common for newer versions of installed packages to become available over time. To see what newer versions of installed packages are available,</p>
+<ol type="1">
+<li>Select the <strong>Environments</strong> tab and the <strong>my_first_env</strong> environment</li>
+<li>In the package dropdown list, select <strong>Updatable</strong>. The number in your list may vary from others - be short or very long (in my case, there were 282 updatable packages in the <strong>base</strong> environment and 2 in the <strong>my_first_env</strong> environment).</li>
+<li>If you have any <strong>Updatable</strong> packages in <strong>my_first_env</strong> environment, select each one and <strong>mark for update</strong> in the pop-up and select <strong>Apply</strong> at the bottom of the Navigator panel.</li>
+</ol>
+<p>In a few moments, an “Update Packages” window will appear. In <strong>my_first_env</strong> environment, it lists two packages in need of update. For reference, in my <strong>base</strong> environment it states,</p>
+<blockquote class="blockquote">
+<p>384 packages will be modified 44 packages will be removed 45 packages will be installed</p>
+</blockquote>
+<p>Select the <strong>Apply</strong> button in that window to complete the process. Depending on the number of packages affected, this may take a while. In <strong>my_first_env</strong> environment, when I try to update them, the messages states, “<em>All requested packages are already installed.</em>” Annoying, but not a problem.</p>
+<p>In my <strong>base</strong> environment, I tried to update the <strong>Python</strong> package and received an error. If you get an error, the process will fail to install any packages at this time. More annoying, but still not a major problem. Generally, you can use <strong>pip</strong> to install these packages (discussed later).</p>
+<p>Finally, if you need to update a large number of packages, this method would be quite painful. Later, using a terminal window to update all packages in an environment will be discussed. Basically, you select the green arrow adjacent to the name of the environment, select “Open Terminal”, and type <code>conda update --all</code> (details later).</p>
+<h2 data-number="5" id="duplicating-environments" class="anchored"><span class="header-section-number">5</span> Duplicating Environments</h2>
+<p>Once we have a working environment, we often wish to use it on a different project. We can duplicate an environment in one of two ways:</p>
+<ul>
+<li>Clone
+<ul>
+<li>Select the environment, select <strong>Clone</strong> at the bottom of the pane, enter a name for the new environment.</li>
+</ul></li>
+<li>Import
+<ul>
+<li>This process opens an Environment file previously created which lists all the packages and versions in an environment. This is done using the Command Line Interface (CLI) by activating an environment and then exporting the list to a YAML file (discussed later).</li>
+</ul></li>
+</ul>
+<h2 data-number="6" id="backing-up-environments" class="anchored"><span class="header-section-number">6</span> Backing up Environments</h2>
+<p>Sometimes we backup a environment to create a checkpoint for work so far, keep a copy for disaster recovery, or migrate between machines. You can backup to your local machine or to Anaconda Cloud. Select the <strong>Backup</strong> button at the bottom of the pane while the desired environment is selected.</p>
+<h2 data-number="7" id="removing-environments" class="anchored"><span class="header-section-number">7</span> Removing Environments</h2>
+<p>Select the environment to remove and select the <strong>Remove</strong> button at the bottom of the pane. It’s a good practice to create an environment file before removing an environment in case you wish to recreate it later.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avoid Data Loss
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you remove an environment, it’s entire folder is deleted including any data stored in that folder. It is good practice to keep data in separate folders than the environment folder.</p>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Ana/Environments2.html" class="pagination-link">
+        <span class="nav-page-text">Using Command Line Interface</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Bob McQuaid</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

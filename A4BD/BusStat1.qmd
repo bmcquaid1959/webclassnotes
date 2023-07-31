@@ -1,0 +1,59 @@
+---
+pagetitle: "Business Statistics I"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Data Types
+
+Source: [@ShaDevVel2012]
+
+## Displaying and Describing  Data
+
+Source: [@ShaDevVel2012]
+
+### Categorical
+
+### Quantitative
+
+## Sampling and Random Variables
+
+Source: [@RasVerPil2020]
+
+### Populations and Parameters
+
+### Sampling
+
+### Random Variables
+
+### Common Distributions
+
+## Point Estimation
+
+Source: [@RasVerPil2020]
+
+## Hypotheses Test - One and Two Sample
+
+Source: [@RasVerPil2020]
+
+## Conidence Intervals - One and Two Sample
+
+Source: [@RasVerPil2020]
+
+## Analysis of Variance
+
+Source: [@RasVerPil2020]
+
+### ANOVA Fixed Effects Models
+
+### ANOVA Models with Random Effects
+
+### ANOVA Mixed Models

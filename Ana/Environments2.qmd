@@ -1,0 +1,24 @@
+---
+pagetitle: "Using Command Line Interface"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Using Command Line Interface
+
+Each Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Command Line Interface (CLI).
+
+Need to summarize pages 34 to 48 here.
+
+
+
+
+

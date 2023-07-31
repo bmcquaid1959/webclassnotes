@@ -11,7 +11,7 @@
     "href": "AdvStats1/advancedstats.html",
     "title": "Advanced Statistics",
     "section": "",
-    "text": "RPython\n\n\nfizz_buzz <- function(fbnums = 1:50) {\n  output <- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
+    "text": "RPython\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
   },
   {
     "objectID": "Opt1/optimization.html",
@@ -30,9 +30,9 @@
   {
     "objectID": "Sim1/simulation.html",
     "href": "Sim1/simulation.html",
-    "title": "Simulation",
+    "title": "Beta Mu Analytics",
     "section": "",
-    "text": "I am testing subfolders.\n\n\nThis is just a test to see the side bar.\n\n\n\nTesting DIagrams\n\n\n\n\n    flowchart LR\n      A[Hard edge] --> B(Round edge)\n      B --> C{Decision}\n      C --> D[Result one]\n      C --> E[Result two]"
+    "text": "1 Introduction\nModeling and Simulation in Python for free. It is also available at Amazon for $35. It has ipynb files available at the free link.\nSimPy is a process-based discrete-event simulation framework based on standard Python."
   },
   {
     "objectID": "Opt1/optimization.html#week-2-examples-of-linear-programming-problems-using-spreadsheets",
@@ -593,5 +593,257 @@
     "title": "Examples of Linear Programming Problems Using Spreadsheets",
     "section": "Deliverables for next week",
     "text": "Deliverables for next week\n\n\n\n\n\n\nDeliverables for next week\n\n\n\nDownload Homework 2 file. Place your Pepperdine User ID at the beginning of the filename. Upload the completed (or as much as you did) work to the Assessments link at 2pep.\nComplete and upload the practice problems available in the Week 3 asynchronous content.\n\nAll due by midnight PST on Monday, January 16:\n\nSolutions to homework 1 will be available after the deadline. No late work is accepted."
+  },
+  {
+    "objectID": "Sim1/simulation.html#simulation-class-this-is-in-a-subfolder-sim1",
+    "href": "Sim1/simulation.html#simulation-class-this-is-in-a-subfolder-sim1",
+    "title": "Simulation",
+    "section": "Simulation Class this is in a subfolder Sim1",
+    "text": "Simulation Class this is in a subfolder Sim1\nI am testing subfolders.\n\ntesting a sub heading 3\nThis is just a test to see the side bar. Ren and Wang (2019)\n\n\ntesting a sub heading 3.1\nTesting Diagrams\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```"
+  },
+  {
+    "objectID": "AdvStats1/advancedstats.html#advanced-statistics-in-subdirectory",
+    "href": "AdvStats1/advancedstats.html#advanced-statistics-in-subdirectory",
+    "title": "Advanced Statistics",
+    "section": "",
+    "text": "RPython\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
+  },
+  {
+    "objectID": "Opt1/contentW1.html#asynchronous-content",
+    "href": "Opt1/contentW1.html#asynchronous-content",
+    "title": "Introduction to Modeling and Linear Programming",
+    "section": "",
+    "text": "The asynchronous content for week 1 serves two purposes:\n\nan introduction to Management Science, Systems Theory, and some historical development, and\nThe basics of the linear programming process using Excel and the graphical solution method. Asynchronous content for Week 2 provides five additional examples using Excel Solver.\n\n\n\n\n\n\n\nImportant\n\n\n\nWhile the introductory lecture positions the course content in the realm of Business Analytics, the examples covered focus on the process we will use throughout the course:\n\ndocument input data\nidentify the objective to be optimized\nidentify the applicable constraints\nconstruct the model\n\nhighlight the variables\nstructure the constraints in standard form\nformulate the objective function\nanalyze the model\nconduct sensitivity analysis\ndescribe and interpret results\n\n\nWhile viewing the asynchronous content (and for the rest of the class), make sure you understand the concepts in item 4 above. You will get better at this after Week 2."
+  },
+  {
+    "objectID": "A4BD/HomeA4BD.html",
+    "href": "A4BD/HomeA4BD.html",
+    "title": "Analytics for Business Decisions",
+    "section": "",
+    "text": "The focus of this course is on the application of analytics for strategic business decision making. The course introduces analytical tools that can be used to leverage data and information for complex problems. The course is designed to support the integration experience and includes an introduction to production and service operations. Specific business modeling applications include: regression analysis, time series forecasting, decision analysis, simulation, linear programming, queuing theory, and project management. These techniques assist managerial decision making in the dynamic and highly competitive world of business, including applications to finance, marketing, engineering, manufacturing, quality, service and human resources problems in such industries as health care, aerospace, high technology, entertainment, global business, and banking. Software technologies and spreadsheets are used extensively throughout this course."
+  },
+  {
+    "objectID": "A4BD/HomeA4BD.html#schedule-by-test-content",
+    "href": "A4BD/HomeA4BD.html#schedule-by-test-content",
+    "title": "Analytics for Business Decisions",
+    "section": "Schedule by test content",
+    "text": "Schedule by test content"
+  },
+  {
+    "objectID": "A4BD/HomeA4BD.html#course-description",
+    "href": "A4BD/HomeA4BD.html#course-description",
+    "title": "Analytics for Business Decisions",
+    "section": "",
+    "text": "The focus of this course is on the application of analytics for strategic business decision making. The course introduces analytical tools that can be used to leverage data and information for complex problems. The course is designed to support the integration experience and includes an introduction to production and service operations. Specific business modeling applications include: regression analysis, time series forecasting, decision analysis, simulation, linear programming, queuing theory, and project management. These techniques assist managerial decision making in the dynamic and highly competitive world of business, including applications to finance, marketing, engineering, manufacturing, quality, service and human resources problems in such industries as health care, aerospace, high technology, entertainment, global business, and banking. Software technologies and spreadsheets are used extensively throughout this course."
+  },
+  {
+    "objectID": "A4BD/AnalyticsTech.html",
+    "href": "A4BD/AnalyticsTech.html",
+    "title": "Analytics & Technology",
+    "section": "",
+    "text": "This extension allows you to use Iconify icons in your Quarto HTML documents. It provides an {{&lt; iconify &gt;}} shortcode:\n\nMandatory &lt;icon-name&gt;:\n{{&lt; iconify &lt;icon-name&gt; &gt;}}\nOptional &lt;set&gt; (default is fluent-emoji) &lt;size=...&gt;, &lt;width=...&gt;, &lt;height=...&gt;, &lt;flip=...&gt;, and &lt;rotate=...&gt;:\n{{&lt; iconify &lt;set&gt; &lt;icon-name&gt; &lt;size=...&gt; &lt;width=...&gt; &lt;height=...&gt; &lt;flip=...&gt; &lt;rotate=...&gt; &gt;}}\nIf &lt;size=...&gt; is defined, &lt;width=...&gt; and &lt;height=...&gt; are not used.\nSee https://docs.iconify.design/iconify-icon/ for more details.\n\nFor example:\n\n\n\n\n\n\n\nShortcode\nIcon\n\n\n\n\n{{&lt; iconify exploding-head &gt;}}\n\n\n\n{{&lt; iconify exploding-head size=2xl &gt;}}\n\n\n\n{{&lt; iconify exploding-head size=5x rotate=180deg &gt;}}\n\n\n\n{{&lt; iconify exploding-head size=Huge &gt;}}\n\n\n\n{{&lt; iconify fluent-emoji-high-contrast 1st-place-medal &gt;}}\n\n\n\n{{&lt; iconify twemoji 1st-place-medal &gt;}}\n\n\n\n{{&lt; iconify line-md loading-alt-loop &gt;}}\n\n\n\n{{&lt; iconify fa6-brands apple width=50px height=10px rotate=90deg flip=vertical &gt;}}"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#using-bootstrap-icons",
+    "href": "A4BD/BusStat1.html#using-bootstrap-icons",
+    "title": "Business Statistics I",
+    "section": "Using Bootstrap Icons",
+    "text": "Using Bootstrap Icons"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#icon-color",
+    "href": "A4BD/BusStat1.html#icon-color",
+    "title": "Business Statistics I",
+    "section": "icon color",
+    "text": "icon color"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#icon-sizing",
+    "href": "A4BD/BusStat1.html#icon-sizing",
+    "title": "Business Statistics I",
+    "section": "icon sizing",
+    "text": "icon sizing"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#using-class",
+    "href": "A4BD/BusStat1.html#using-class",
+    "title": "Business Statistics I",
+    "section": "using class",
+    "text": "using class\nWe use the class styled to color all icons in red.\n\n.styled {\n  color: red;\n}"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#thats-it",
+    "href": "A4BD/BusStat1.html#thats-it",
+    "title": "Business Statistics I",
+    "section": "That’s it",
+    "text": "That’s it"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#sampling-and-random-variables--rasverpil2020.",
+    "href": "A4BD/BusStat1.html#sampling-and-random-variables--rasverpil2020.",
+    "title": "Beta Mu Analytics",
+    "section": "Sampling and Random Variables (2020).",
+    "text": "Sampling and Random Variables (2020)."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#point-estimation--rasverpil2020.",
+    "href": "A4BD/BusStat1.html#point-estimation--rasverpil2020.",
+    "title": "Beta Mu Analytics",
+    "section": "Point Estimation (2020).",
+    "text": "Point Estimation (2020)."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample--rasverpil2020",
+    "href": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample--rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "Hypotheses Test - One and Two Sample (2020)",
+    "text": "Hypotheses Test - One and Two Sample (2020)"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample--rasverpil2020",
+    "href": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample--rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "Conidence Intervals - One and Two Sample (2020)",
+    "text": "Conidence Intervals - One and Two Sample (2020)"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#analysis-of-variance--rasverpil2020",
+    "href": "A4BD/BusStat1.html#analysis-of-variance--rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "Analysis of Variance (2020)",
+    "text": "Analysis of Variance (2020)\n\nANOVA Fixed Effects Models\n\n\nANOVA Models with Random Effects\n\n\nANOVA Mixed Models\n\n\nReferences\n\n\nRasch, Dieter, L. R. Verdooren, and Jürgen Pilz. 2020. Applied Statistics: Theory and Problem Solutions with R. Hoboken, NJ, USA: Wiley."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#sampling-and-random-variables-rasverpil2020.",
+    "href": "A4BD/BusStat1.html#sampling-and-random-variables-rasverpil2020.",
+    "title": "Beta Mu Analytics",
+    "section": "Sampling and Random Variables (Rasch, Verdooren, and Pilz 2020).",
+    "text": "Sampling and Random Variables (Rasch, Verdooren, and Pilz 2020)."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#point-estimation-rasverpil2020.",
+    "href": "A4BD/BusStat1.html#point-estimation-rasverpil2020.",
+    "title": "Beta Mu Analytics",
+    "section": "Point Estimation (Rasch, Verdooren, and Pilz 2020).",
+    "text": "Point Estimation (Rasch, Verdooren, and Pilz 2020)."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#sampling-and-random-variables-1",
+    "href": "A4BD/BusStat1.html#sampling-and-random-variables-1",
+    "title": "Beta Mu Analytics",
+    "section": "Sampling and Random Variables 1",
+    "text": "Sampling and Random Variables 1"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#point-estimation",
+    "href": "A4BD/BusStat1.html#point-estimation",
+    "title": "Beta Mu Analytics",
+    "section": "Point Estimation",
+    "text": "Point Estimation"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample",
+    "href": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample",
+    "title": "Beta Mu Analytics",
+    "section": "Hypotheses Test - One and Two Sample",
+    "text": "Hypotheses Test - One and Two Sample"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample",
+    "href": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample",
+    "title": "Beta Mu Analytics",
+    "section": "Conidence Intervals - One and Two Sample",
+    "text": "Conidence Intervals - One and Two Sample"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#analysis-of-variance",
+    "href": "A4BD/BusStat1.html#analysis-of-variance",
+    "title": "Beta Mu Analytics",
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\n\nANOVA Fixed Effects Models\n\n\nANOVA Models with Random Effects\n\n\nANOVA Mixed Models\n\n\n\n\nRasch, Dieter, L. R. Verdooren, and Jürgen Pilz. 2020. Applied Statistics: Theory and Problem Solutions with R. Hoboken, NJ, USA: Wiley."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#footnotes",
+    "href": "A4BD/BusStat1.html#footnotes",
+    "title": "Beta Mu Analytics",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n[1]↩︎\n[1]↩︎\n[1]↩︎"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html",
+    "href": "A4BD/BusStat1.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Data Types\nSource: [2]\n2 Displaying and Describing Data\nSource: [2]\n2.1 Categorical\n2.2 Quantitative\n3 Sampling and Random Variables\nSource: [1]\n3.1 Populations and Parameters\n3.2 Sampling\n3.3 Random Variables\n3.4 Common Distributions\n4 Point Estimation\nSource: [1]\n5 Hypotheses Test - One and Two Sample\nSource: [1]\n6 Conidence Intervals - One and Two Sample\nSource: [1]\n7 Analysis of Variance\nSource: [1]\n7.1 ANOVA Fixed Effects Models\n7.2 ANOVA Models with Random Effects\n7.3 ANOVA Mixed Models\n\n\n\n\nReferences\n\n[1] Rasch, D. et al. 2020. Applied statistics: Theory and problem solutions with R. Wiley.\n\n\n[2] Sharpe, N.R. et al. 2012. Business Statistics: A First Course. Pearson."
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#point-estimation-rasverpil2020",
+    "href": "A4BD/BusStat1.html#point-estimation-rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "2 Point Estimation [1]",
+    "text": "2 Point Estimation [1]"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample-rasverpil2020",
+    "href": "A4BD/BusStat1.html#hypotheses-test---one-and-two-sample-rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "3 Hypotheses Test - One and Two Sample [1]",
+    "text": "3 Hypotheses Test - One and Two Sample [1]"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample-rasverpil2020",
+    "href": "A4BD/BusStat1.html#conidence-intervals---one-and-two-sample-rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "4 Conidence Intervals - One and Two Sample [1]",
+    "text": "4 Conidence Intervals - One and Two Sample [1]"
+  },
+  {
+    "objectID": "A4BD/BusStat1.html#analysis-of-variance-rasverpil2020",
+    "href": "A4BD/BusStat1.html#analysis-of-variance-rasverpil2020",
+    "title": "Beta Mu Analytics",
+    "section": "5 Analysis of Variance [1]",
+    "text": "5 Analysis of Variance [1]\n\n5.1 ANOVA Fixed Effects Models\n\n\n5.2 ANOVA Models with Random Effects\n\n\n5.3 ANOVA Mixed Models"
+  },
+  {
+    "objectID": "Ana/GettingStarted.html",
+    "href": "Ana/GettingStarted.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Download and install\nAnaconda the “Graphical Installer” for your operating system. For detailed instructions for loading Anaconda, visit Installing on Windows, macOS, or Linux.\n\n\n\n\n\n\nWarning\n\n\n\n\nIF you do not have a 64-bit machine, then:\n\nyou should consider upgrading your equipment, it is definitely time.\nnot sure? Go to this link to figure it out.\n\nif you have a 32-bit machine and decide to keep using it, go to Anaconda’s older operating systems and figure it out. This may become an issue for you later or it may not - the world can be very frustrating.\n\nThe install will ask you to shut down all other programs before installation.\n\n\nAfter finishing install Once installation is complete, a browser window will open welcoming you to Anaconda and inviting you to Register for Free. I recommend using your Pepperdine email address for this. A “Get more content” screen will pop-up. I registered and checked the send me info box - but you can choose to do that or not.\nEnroll for your cloud acccount The next screen will be a bit scary for many, but for now, select the link to send verification email to finish setting up your cloud account OR check your email as it may have already been sent. Once verified, you’ll be redirected to the scary screen again.\nVerify you’ve installed successfully by starting Anaconda Navigator following these instructions. When navigator opens, login using your cloud account credentials. If you encounter problems, visit the troubleshooting links.\n\n\n\n\n\n\nNote\n\n\n\nSometimes getting through the initial installation of any software can be quite annoying while serving as a high-quality learning experience. Make sure to follow the instructions for your operating system; if you experience challenges, try the troubleshooting link above and some web searches. There are 35 million users making this the world’s most popular Python development platform (according to them).\n\n\n2 Getting started with Anaconda Navigator\nVisit the Getting Started page and spend about 10 minutes reviewing the contents of this page.\nHome contains all applications that are installed (can be launched) and those you might wish to install. As you can imagine, there are many more available than are listed here.\nEnvironments are just folders or directories used to isolate and manage packages. On a windows machine, the base environment is in your user directory on your machine. You can create another by selecting CREATE at the bottom of Navigator and entering a new name. If you do create more environments, the active one has an arrow beside it. You can install any version of Python you wish in new environments, we won’t be using this feature too much - but software developers might need it.\nLearning provides a large number of resources to help with learning the various available packages. It can be a bit overwhelming, but we will use most of these sparingly. The are largely written by software developers, so they can be pretty technical - good resource, but not necessarily best place to learn."
+  },
+  {
+    "objectID": "Ana/Environments1.html",
+    "href": "Ana/Environments1.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Using Navigator\nEach Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Conda Navigator\n2 Basic concepts\nEach environment is like a separate Python installation and is simply a dedicated directory on your system. A package manager ensures the directory contains the appropriate versions based on the latest stable available or what you specify. It also finds and loads all the appropriate dependencies for these versions. This system is particularly effective in a production environment where you may be working on multiple projects from with different programmers or on legacy systems that use older package versions. You can view the directory where your packages are stored by opening cmd.exe Prompt in the Navigator and enter conda info.\nThe base environment is installed when you install Anaconda and includes Python and core libraries and dependencies of conda. Generally, create a new environment for each project and install additional packages by project - not in the base.\n2.1 Conda and pip\nSome packages, not available through Navigator, must be installed using pip (Python management system) which is available in each environment and installs packages from PyPI. However, for projects requiring the use of pip, it is best to create the environment by proceeding:\n\nInstall packages using conda navigator first.\nInstall packages needing pip.\nDon’t run pip in the base environment.\nIf changes are needed in the new project, recreate the environment in order of 1 and 2 again.\nDocument the conda and pip requirements in an environment text file (discussed later).\n\n3 Creating a New Environment\n\nOpen Anaconda Navigator desktop app.\nSelect the Environments tab and select the Create button (bottom of panel). In the pop-up window, enter my_first_env in the New environment name field.\nSelect Create in that window.\nThe new environment appears as the now active environment. In the package dropdown list, select Installed.\n\n\n\n\n\n\n\nthe envs folder\n\n\n\nThe name you enter will be a sub-folder in the envs folder within your Anaconda installation. Therefore, each environment must have unique names. The version of Python in that environment defaults to the most recent stable version of Python available; earlier versions are available in case you want to use one.\n\n\n4 Managing Packages\n\n\n\n\n\n\nWorking in the active environment\n\n\n\nWhatever environment you have selected as active is where new packages are installed, updated, or removed. Make sure that when managing packages, you have selected your desired environment.\n\n\n\nFor the remainder of this page, we will be working in my_first_env so make sure you select it before performing these operations.\n\n4.1 Find and Install Packages\nSelect the Environments tab and select the my_first_env environment. The currently installed packages appear in the panel to the right. There is a dropdown list above the packages with the following options:\n\nInstalled\n\nyou can scroll to view or “Search Packages” by typing part of the package name to limit options. In my case my_first_env environment had 18 packages installed.\n\nNot Installed\n\nyou can scroll to view or “Search Packages” by typing part of the package name to limit options. There is likely a large list of not installed packages available.\n\nUpdatable\nSelected\nAll\n\n\n\n\n\n\n\nUsing the “Search Packages” causes dropdown list to disappear\n\n\n\nIf you type in the “Search Packages” field and then change the dropdown between Installed and Not Installed or change the active Environment, the package list may disappear. You simply need to clear the “Search Packages” field and the package list will reappear correctly.\n\n\n4.2 Additional Packages\nAdditional packages are available by a number of different independent providers and contributors. You can access these channels by adding a Channel. Select the Channel button next to the packages dropdown list and enter the channel you wish to add. For example, the conda-forge community has thousands of contributors who provide packages. To add their channel,\n\nSelect the Channel button\nClick the Add button\nEnter conda-forge in the channel name field and Enter\nSelect the Update channels button\n\nSelect All in the packages dropdown list. The number of packages available (shown at the bottom of Navigator) likely increased (mine went from 9,675 to over 25,000). You can remove a channel by returning to the Channel button and selecting the trash can () icon adjacent to the channel you wish to delete.\n\n\n\n\n\n\nPractice adding a package to the base environment\n\n\n\n\n\nSimPy is a process-based discrete-event simulation framework based on standard Python. Let’s add it to the base environment in Navigator.\n\nSelect the Environments tab and select the my_first_env environment in the left navigation panel.\nIn the package dropdown list select Installed and type SimPy in the Package Search field. It is very likely the list will be empty (unless you added SimPy previously).\nLeave SimPy in the Package Search field and select Not installed in the package dropdown list. You may see more than one package available, but we are only interested in the one simply titled “SimPy.”\nSelect the checkbox () icon next to the SimPy package\nSelect the Apply button at the bottom of the Navigator panel.\n\nIn a few moments, an “Install Packages” window will appear listing the SimPy package added as well as any packages on which SimPy depends to be added or modified to the my_first_env environment . Select the Apply button in that window to complete the process.\n\nSelect Installed in the package dropdown list and you will see “simpy” has been installed. Clear the Package Search field and your Installed list has increased to 19 packages.\n\n\n\n\n\n\n\n\n\n\nThe “-base” packages\n\n\n\nCan cause confusion: there is a difference between\n\nthe base environment when you first install Anaconda, and\n-base versions of most major packages\n\nMajor libraries often appear duplicated. For example, select the Environments tab  the base environment  Installed in the package dropdown list and type matplotlib in the Package Search field. There may be more, but note a matplotlib and matplotlib-base are identified. The -base packages tend to be lighter versions (less functional) loaded when installing other packages that depend on the main package.\nThe base environment and packages versions with a -base suffix are two completely different things.\n\n\n4.3 Updating and Removing Packages\nIt is common for newer versions of installed packages to become available over time. To see what newer versions of installed packages are available,\n\nSelect the Environments tab and the my_first_env environment\nIn the package dropdown list, select Updatable. The number in your list may vary from others - be short or very long (in my case, there were 282 updatable packages in the base environment and 2 in the my_first_env environment).\nIf you have any Updatable packages in my_first_env environment, select each one and mark for update in the pop-up and select Apply at the bottom of the Navigator panel.\n\nIn a few moments, an “Update Packages” window will appear. In my_first_env environment, it lists two packages in need of update. For reference, in my base environment it states,\n\n384 packages will be modified 44 packages will be removed 45 packages will be installed\n\nSelect the Apply button in that window to complete the process. Depending on the number of packages affected, this may take a while. In my_first_env environment, when I try to update them, the messages states, “All requested packages are already installed.” Annoying, but not a problem.\nIn my base environment, I tried to update the Python package and received an error. If you get an error, the process will fail to install any packages at this time. More annoying, but still not a major problem. Generally, you can use pip to install these packages (discussed later).\nFinally, if you need to update a large number of packages, this method would be quite painful. Later, using a terminal window to update all packages in an environment will be discussed. Basically, you select the green arrow adjacent to the name of the environment, select “Open Terminal”, and type conda update --all (details later).\n5 Duplicating Environments\nOnce we have a working environment, we often wish to use it on a different project. We can duplicate an environment in one of two ways:\n\nClone\n\nSelect the environment, select Clone at the bottom of the pane, enter a name for the new environment.\n\nImport\n\nThis process opens an Environment file previously created which lists all the packages and versions in an environment. This is done using the Command Line Interface (CLI) by activating an environment and then exporting the list to a YAML file (discussed later).\n\n\n6 Backing up Environments\nSometimes we backup a environment to create a checkpoint for work so far, keep a copy for disaster recovery, or migrate between machines. You can backup to your local machine or to Anaconda Cloud. Select the Backup button at the bottom of the pane while the desired environment is selected.\n7 Removing Environments\nSelect the environment to remove and select the Remove button at the bottom of the pane. It’s a good practice to create an environment file before removing an environment in case you wish to recreate it later.\n\n\n\n\n\n\nAvoid Data Loss\n\n\n\nWhen you remove an environment, it’s entire folder is deleted including any data stored in that folder. It is good practice to keep data in separate folders than the environment folder."
+  },
+  {
+    "objectID": "Ana/Environments2.html",
+    "href": "Ana/Environments2.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Using Command Line Interface\nEach Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Command Line Interface (CLI).\nNeed to summarize pages 34 to 48 here."
+  },
+  {
+    "objectID": "Ana/ScriptingQt.html",
+    "href": "Ana/ScriptingQt.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Scripting in the Jupyter Qt Console\nThe Jupyter Qt Console blends the simplicity of a terminal with features of a GUI to quickly test ideas, explore datasets, and work through tutorials. The interface is not intended for extended interactive use, but includes line numbers, multiple tabs, rich media output, command history retrieval across sessions, multiline editing, syntax highlighting, session export, and more.\nThere is a pretty quick tutorial available if you wish to practice a bit after completing this section.\n1.1 Seaborn Data Visualization Library\nViewing plots in the QtConsole requires installation of the seaborn data visualization library. We’ll use my_first_env environment during this section.\n\nIn Navigator, make the my_first_env environment as the active environment.\nSelect Not Installed in the package dropdown menu\nEnter seaborn in the package search field\nSelect the check box  next to the seaborn package.\nSelect the Apply button at the bottom of the panel.\nWhen the “Install packages” window pops up, select Apply in that window to install seaborn and required dependencies (there may be many).\n\n2 Install and Launch Jupyter Qt Console Using Navigator\n\nSelect the Home  tab in Navigator.\nSelect my_first_env in the dropdown to identify the environment in which to install Qt Console.\nSelect the Install button on the Qt Console tile.\n\nIgnore the package named jupyter console as it does not include graphics capability.\nIf no Qt Console package is available on the Home  tab, then it has not been installed yet.\n\nIn Navigator, select the  Environment tab and make the my_first_env environment as the active environment.\nSelect Not Installed in the package dropdown menu\nEnter qtconsole in the package search field\nSelect the check box  next to the qtconsole package.\nSelect the Apply button at the bottom of the panel.\nWhen the “Install packages” window pops up, select Apply in that window to install seaborn and required dependencies (there may be many).\nReturn to the  Home tab, select the  Refresh button. Complete steps 1-2 above.\n\nIf Qt console still does not appear in a tile,\n\nReturn to the Environments tab and select the  button for the my_first_env environment and select Open Terminal.\nEnter conda install qtconsole\nReview the messages returned, if it warns you to upgrade, enter conda update -n base -c defaults conda\nThere will be a lengthy message to upgrade, downgrade, and remove packages below which you will need to enter y at the **Proceed? ([y],n) prompt.\nYou may get a verification error, but the installation was likely successful.\n\n\nLaunch Jupyter Qt Console\n\nReturn to the Environments tab and select the  button for the my_first_env environment and select Open Terminal.\nEnter jupyter qtconsole and hit enter.\nInput 5 * 2 + (10 / 2) adjacent to the In [1]: and Enter. The result should say Out[1]: 15.0**.\n\n\n3 Qt Console Controls\n3.1 Syntax Style\nThe console provides color-coding for various elements like the In and Out called syntax highlighting. You can choose from a large number of style types by selecting View  Syntax Style at your discretion.\nOpen a new tab by selecting File  New Tab with New kernel. You can rename the tab by entering Window  Rename Current Tab. You can choose a different syntax style on each tab if you wish. That can be helpful when experimenting with different codes.\n3.2 Keyboard Shortcuts\nKeyboard shortcuts (or keybindings) such as Ctrl-C for copy are available at Help  QtConsole help under the Key bindings heading.\nThe box below contains a list of these, some you will use all the time, others you may not use at all.\n\n\n\n\n\n\nKey Bindings\n\n\n\n\n\n\nCtrl-c copy highlighted text to clipboard (prompts are automatically stripped).\nCtrl-Shft-C copy highlighted text to clipboard (prompts are not stripped).\nCtrl-v paste text from clipboard.\nCtrl-z undo (retrieves lost text if you move out of a cell with the arrows).\nCtrl-Shft-Z redo.\nCtrl-l clear terminal.\n\nCtrl-a go to beginning of line.\nCtrl-e go to end of line.\nCtrl-p previous line (like up arrow)\nCtrl-n next line (like down arrow)\nCtrl-f forward (like right arrow)\nCtrl-b back (like left arrow)\nAlt-&lt; move to the beginning of the input region.\nAlt-&gt; move to the end of the input region.\n\nCtrl-y yank (paste)\nCtrl-d delete next character, or exits if input is empty\nAlt-d delete next word.\nAlt-backspace: delete previous word.\nCtrl-+ increase font size.\nCtrl– decrease font size.\n\nCtrl-. force a kernel restart (a confirmation dialog appears).\n\nCtrl-Alt-space toggle full screen. (Command-Control-Space on Mac OS X)\nCtrl-o move to ‘other’ area, between pager and terminal.\nCtrl-u kill from cursor to the begining of the line.\nCtrl-k kill from cursor to the end of the line.\n\n\n\n\n3.2.1 Running code\nWhen typing code in the console, the code on that line will execute if you select Enter unless you are working on a multi-line script.\nA multi-line script can be input by selecting Ctrl-Enter after typing the first line of code. Each line input after which you insert a new line by selecting Ctrl-Enter. Once you’ve input all lines of code, select Shft-Enter to execute the script.\nBasics\n\nEnter execute single line\nCtrl-Enter force new line, never causes execution.\nShft-Enter force execution regardless of where cursor is, no newline added.\n\n\n\n\n\n\n\nPractice running multiline code in Qt Console\n\n\n\n\n\nPractice inputting the code shown below one line at a time.\n\nAfter inputting each line, select Ctrl-Enter\nMake sure to include the semi-colon (;) only at the end of the last line\nAfter inputting the semi-colon on the last line, select Shft-Enter\n\nThe output should be four line graphs of Density vs tip for each day in the dataset. You can save this as an HTML file and open the code and graphs in a browser.\nimport seaborn as sns\ntips = sns.load_dataset('tips')\nordered_days = tips.day.value_counts().index\nchart = sns.FacetGrid(tips, row='day', row_order=ordered_days, height 1.5, aspect = 4)\nchart.map(sns.kdeplot, 'tips');\n\n\n\n3.3 Tabs and Kernels\nA kernel is the active “computational engine” that executes code. When you add a new tab you have three options for the kernel\n\nNew tab with new kernel: Opens a new tab with a new IPython kernel\nNew tab with same kernel: Creates a child of a parent kernel loaded on a particular tab. Objects initialized on the parent tab are accessible in both tabs.\nNew tab with existing kernel: Opens a new tab and lets you choose from kernels other than IPython.\n\nThe first two are the most common. The New tab with same kernel is convenient if you are investigating alternative scripts or writing functions."
+  },
+  {
+    "objectID": "Ana/Installation.html",
+    "href": "Ana/Installation.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Download and install\nAnaconda the “Graphical Installer” for your operating system. For detailed instructions for loading Anaconda, visit Installing on Windows, macOS, or Linux.\n\n\n\n\n\n\nWarning\n\n\n\n\nIF you do not have a 64-bit machine, then:\n\nyou should consider upgrading your equipment, it is definitely time.\nnot sure? Go to this link to figure it out.\n\nif you have a 32-bit machine and decide to keep using it, go to Anaconda’s older operating systems and figure it out. This may become an issue for you later or it may not - the world can be very frustrating.\n\nThe install will ask you to shut down all other programs before installation.\n\n\nAfter finishing install Once installation is complete, a browser window will open welcoming you to Anaconda and inviting you to Register for Free. I recommend using your Pepperdine email address for this. A “Get more content” screen will pop-up. I registered and checked the send me info box - but you can choose to do that or not.\nEnroll for your cloud acccount The next screen will be a bit scary for many, but for now, select the link to send verification email to finish setting up your cloud account OR check your email as it may have already been sent. Once verified, you’ll be redirected to the scary screen again.\nVerify you’ve installed successfully by starting Anaconda Navigator following these instructions. When navigator opens, login using your cloud account credentials. If you encounter problems, visit the troubleshooting links.\n\n\n\n\n\n\nNote\n\n\n\nSometimes getting through the initial installation of any software can be quite annoying while serving as a high-quality learning experience. Make sure to follow the instructions for your operating system; if you experience challenges, try the troubleshooting link above and some web searches. There are 35 million users making this the world’s most popular Python development platform (according to them).\n\n\n2 Getting started with Anaconda Navigator\nVisit the Getting Started page and spend about 10 minutes reviewing the contents of this page.\nHome contains all applications that are installed (can be launched) and those you might wish to install. As you can imagine, there are many more available than are listed here.\nEnvironments are just folders or directories used to isolate and manage packages. On a windows machine, the base environment is in your user directory on your machine. You can create another by selecting CREATE at the bottom of Navigator and entering a new name. If you do create more environments, the active one has an arrow beside it. You can install any version of Python you wish in new environments, we won’t be using this feature too much - but software developers might need it.\nLearning provides a large number of resources to help with learning the various available packages. It can be a bit overwhelming, but we will use most of these sparingly. The are largely written by software developers, so they can be pretty technical - good resource, but not necessarily best place to learn."
+  },
+  {
+    "objectID": "Ana/ScriptingSpyder.html",
+    "href": "Ana/ScriptingSpyder.html",
+    "title": "Beta Mu Analytics",
+    "section": "",
+    "text": "1 Spyder IDE"
   }
 ]

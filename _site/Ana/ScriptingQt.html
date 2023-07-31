@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Bob McQuaid">
+
+<title>Jupyter Qt Console</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Beta Mu Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Ana/GettingStarted.qmd" rel="" target="">
+ <span class="menu-text">Anaconda</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../A4BD/HomeA4BD.html" rel="" target="">
+ <span class="menu-text">Analytics for Business Decisions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Sim1/simulation.html" rel="" target=""><i class="bi bi-sliders" role="img">
+</i> 
+ <span class="menu-text">Simulation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Opt1/optimization.html" rel="" target=""><i class="bi bi-bezier" role="img">
+</i> 
+ <span class="menu-text">Optimization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../AdvStats1/advancedstats.html" rel="" target=""><i class="bi bi-pie-chart" role="img">
+</i> 
+ <span class="menu-text">Advanced Statistics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Sol/index.html" rel="" target=""><i class="bi bi-patch-question" role="img">
+</i> 
+ <span class="menu-text">Solutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ana/ScriptingQt.html">Jupyter Qt Console</a></li><li class="breadcrumb-item"><a href="../Ana/ScriptingQt.html">Scripting in the Jupyter Qt Console</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Installation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Download and install</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Environments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Environments1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Navigator</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/Environments2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using Command Line Interface</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Jupyter Qt Console</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/ScriptingQt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Scripting in the Jupyter Qt Console</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Spyder IDE</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ana/ScriptingSpyder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ScriptingSpyder.html</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#scripting-in-the-jupyter-qt-console" id="toc-scripting-in-the-jupyter-qt-console" class="nav-link active" data-scroll-target="#scripting-in-the-jupyter-qt-console"><span class="header-section-number">1</span> Scripting in the Jupyter Qt Console</a>
+  <ul>
+  <li><a href="#seaborn-data-visualization-library" id="toc-seaborn-data-visualization-library" class="nav-link" data-scroll-target="#seaborn-data-visualization-library"><span class="header-section-number">1.1</span> Seaborn Data Visualization Library</a></li>
+  </ul></li>
+  <li><a href="#install-and-launch-jupyter-qt-console-using-navigator" id="toc-install-and-launch-jupyter-qt-console-using-navigator" class="nav-link" data-scroll-target="#install-and-launch-jupyter-qt-console-using-navigator"><span class="header-section-number">2</span> Install and Launch Jupyter Qt Console Using Navigator</a></li>
+  <li><a href="#qt-console-controls" id="toc-qt-console-controls" class="nav-link" data-scroll-target="#qt-console-controls"><span class="header-section-number">3</span> Qt Console Controls</a>
+  <ul>
+  <li><a href="#syntax-style" id="toc-syntax-style" class="nav-link" data-scroll-target="#syntax-style"><span class="header-section-number">3.1</span> Syntax Style</a></li>
+  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts" class="nav-link" data-scroll-target="#keyboard-shortcuts"><span class="header-section-number">3.2</span> Keyboard Shortcuts</a>
+  <ul>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">3.2.1</span> Running code</a></li>
+  </ul></li>
+  <li><a href="#tabs-and-kernels" id="toc-tabs-and-kernels" class="nav-link" data-scroll-target="#tabs-and-kernels"><span class="header-section-number">3.3</span> Tabs and Kernels</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<h2 data-number="1" id="scripting-in-the-jupyter-qt-console" class="anchored"><span class="header-section-number">1</span> Scripting in the Jupyter Qt Console</h2>
+<p>The <a href="https://qtconsole.readthedocs.io/en/stable/index.html">Jupyter Qt Console</a> blends the simplicity of a terminal with features of a GUI to quickly test ideas, explore datasets, and work through tutorials. The interface is not intended for extended interactive use, but includes line numbers, multiple tabs, rich media output, command history retrieval across sessions, multiline editing, syntax highlighting, session export, and more.</p>
+<p>There is a pretty <a href="https://www.tutorialspoint.com/jupyter/jupyter_qtconsole_getting_started.htm">quick tutorial</a> available if you wish to practice a bit after completing this section.</p>
+<h3 data-number="1.1" id="seaborn-data-visualization-library" class="anchored"><span class="header-section-number">1.1</span> Seaborn Data Visualization Library</h3>
+<p>Viewing plots in the QtConsole requires installation of the seaborn data visualization library. We’ll use <strong>my_first_env</strong> environment during this section.</p>
+<ol type="1">
+<li>In Navigator, make the <strong>my_first_env</strong> environment as the active environment.</li>
+<li>Select <strong>Not Installed</strong> in the package dropdown menu</li>
+<li>Enter <code>seaborn</code> in the package search field</li>
+<li>Select the check box <i class="fa-solid fa-square-check" aria-label="square-check"></i> next to the seaborn package.</li>
+<li>Select the <strong>Apply</strong> button at the bottom of the panel.</li>
+<li>When the “Install packages” window pops up, select <strong>Apply</strong> in that window to install seaborn and required dependencies (there may be many).</li>
+</ol>
+<h2 data-number="2" id="install-and-launch-jupyter-qt-console-using-navigator" class="anchored"><span class="header-section-number">2</span> Install and Launch Jupyter Qt Console Using Navigator</h2>
+<ol type="1">
+<li>Select the Home <i class="fa-solid fa-home" aria-label="home"></i> tab in Navigator.</li>
+<li>Select <strong>my_first_env</strong> in the dropdown to identify the environment in which to install <strong>Qt Console</strong>.</li>
+<li>Select the <strong>Install</strong> button on the <strong>Qt Console</strong> tile.
+<ul>
+<li><em>Ignore</em> the package named <em>jupyter console</em> as it does not include graphics capability.</li>
+<li>If no <strong>Qt Console</strong> package is available on the Home <i class="fa-solid fa-home" aria-label="home"></i> tab, then it has not been installed yet.
+<ol type="i">
+<li>In Navigator, select the <i class="fa-solid fa-cube" aria-label="cube"></i> Environment tab and make the <strong>my_first_env</strong> environment as the active environment.</li>
+<li>Select <strong>Not Installed</strong> in the package dropdown menu</li>
+<li>Enter <code>qtconsole</code> in the package search field</li>
+<li>Select the check box <i class="fa-solid fa-square-check" aria-label="square-check"></i> next to the <strong>qtconsole</strong> package.</li>
+<li>Select the <strong>Apply</strong> button at the bottom of the panel.</li>
+<li>When the “Install packages” window pops up, select <strong>Apply</strong> in that window to install seaborn and required dependencies (there may be many).</li>
+<li>Return to the <i class="fa-solid fa-home" aria-label="home"></i> Home tab, select the <i class="fa-solid fa-rotate-right" aria-label="rotate-right"></i> Refresh button. Complete steps 1-2 above.</li>
+</ol></li>
+<li>If <strong>Qt console</strong> still does not appear in a tile,
+<ol type="i">
+<li>Return to the Environments tab and select the <i class="fa-solid fa-circle-chevron-right" aria-label="circle-chevron-right"></i> button for the <strong>my_first_env</strong> environment and select <strong>Open Terminal</strong>.</li>
+<li>Enter <code>conda install qtconsole</code></li>
+<li>Review the messages returned, if it warns you to upgrade, enter <code>conda update -n base -c defaults conda</code></li>
+<li>There will be a lengthy message to upgrade, downgrade, and remove packages below which you will need to enter <code>y</code> at the **Proceed? ([y],n) prompt.</li>
+<li>You may get a verification error, but the installation was likely successful.</li>
+</ol></li>
+</ul></li>
+<li>Launch Jupyter Qt Console
+<ol type="i">
+<li>Return to the Environments tab and select the <i class="fa-solid fa-circle-chevron-right" aria-label="circle-chevron-right"></i> button for the <strong>my_first_env</strong> environment and select <strong>Open Terminal</strong>.</li>
+<li>Enter <code>jupyter qtconsole</code> and hit enter.</li>
+<li>Input <code>5 * 2 + (10 / 2)</code> adjacent to the <strong>In [1]:</strong> and Enter. The result should say <span style="color:red"><strong>Out[1]:</strong></span> 15.0**.</li>
+</ol></li>
+</ol>
+<h2 data-number="3" id="qt-console-controls" class="anchored"><span class="header-section-number">3</span> Qt Console Controls</h2>
+<h3 data-number="3.1" id="syntax-style" class="anchored"><span class="header-section-number">3.1</span> Syntax Style</h3>
+<p>The console provides color-coding for various elements like the <strong>In</strong> and <span style="color:red"><strong>Out</strong></span> called <em>syntax highlighting</em>. You can choose from a large number of style types by selecting <strong>View</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>Syntax Style</strong> at your discretion.</p>
+<p>Open a new tab by selecting <strong>File</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>New Tab with New kernel</strong>. You can rename the tab by entering <strong>Window</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>Rename Current Tab</strong>. You can choose a different syntax style on each tab if you wish. That can be helpful when experimenting with different codes.</p>
+<h3 data-number="3.2" id="keyboard-shortcuts" class="anchored"><span class="header-section-number">3.2</span> Keyboard Shortcuts</h3>
+<p>Keyboard shortcuts (or <em>keybindings</em>) such as <kbd>Ctrl-C</kbd> for copy are available at <strong>Help</strong> <i class="fa-solid fa-caret-right" aria-label="caret-right"></i> <strong>QtConsole help</strong> under the <strong>Key bindings</strong> heading.</p>
+<p>The box below contains a list of these, some you will use all the time, others you may not use at all.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key Bindings
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><kbd>Ctrl-c</kbd> copy highlighted text to clipboard (prompts are automatically stripped).</li>
+<li><kbd>Ctrl-Shft-C</kbd> copy highlighted text to clipboard (prompts are not stripped).</li>
+<li><kbd>Ctrl-v</kbd> paste text from clipboard.</li>
+<li><kbd>Ctrl-z</kbd> undo (retrieves lost text if you move out of a cell with the arrows).</li>
+<li><kbd>Ctrl-Shft-Z</kbd> redo.</li>
+<li><kbd>Ctrl-l</kbd> clear terminal.</li>
+<li></li>
+<li><kbd>Ctrl-a</kbd> go to beginning of line.</li>
+<li><kbd>Ctrl-e</kbd> go to end of line.</li>
+<li><kbd>Ctrl-p</kbd> previous line (like up arrow)</li>
+<li><kbd>Ctrl-n</kbd> next line (like down arrow)</li>
+<li><kbd>Ctrl-f</kbd> forward (like right arrow)</li>
+<li><kbd>Ctrl-b</kbd> back (like left arrow)</li>
+<li><kbd>Alt-&lt;</kbd> move to the beginning of the input region.</li>
+<li><kbd>Alt-&gt;</kbd> move to the end of the input region.</li>
+<li></li>
+<li><kbd>Ctrl-y</kbd> yank (paste)</li>
+<li><kbd>Ctrl-d</kbd> delete next character, or exits if input is empty</li>
+<li><kbd>Alt-d</kbd> delete next word.</li>
+<li><kbd>Alt-backspace</kbd>: delete previous word.</li>
+<li><kbd>Ctrl-+</kbd> increase font size.</li>
+<li><kbd>Ctrl–</kbd> decrease font size.</li>
+<li></li>
+<li><kbd>Ctrl-.</kbd> force a kernel restart (a confirmation dialog appears).</li>
+<li></li>
+<li><kbd>Ctrl-Alt-space</kbd> toggle full screen. (Command-Control-Space on Mac OS X)</li>
+<li><kbd>Ctrl-o</kbd> move to ‘other’ area, between pager and terminal.</li>
+<li><kbd>Ctrl-u</kbd> kill from cursor to the begining of the line.</li>
+<li><kbd>Ctrl-k</kbd> kill from cursor to the end of the line.</li>
+</ul>
+</div>
+</div>
+</div>
+<h4 data-number="3.2.1" id="running-code" class="anchored"><span class="header-section-number">3.2.1</span> Running code</h4>
+<p>When typing code in the console, the code on that line will execute if you select <kbd>Enter</kbd> unless you are working on a multi-line script.</p>
+<p>A multi-line script can be input by selecting <kbd>Ctrl-Enter</kbd> after typing the first line of code. Each line input after which you insert a new line by selecting <kbd>Ctrl-Enter</kbd>. Once you’ve input all lines of code, select <kbd>Shft-Enter</kbd> to execute the script.</p>
+<p><strong>Basics</strong></p>
+<ol type="1">
+<li><kbd>Enter</kbd> <em>execute</em> single line</li>
+<li><kbd>Ctrl-Enter</kbd> <em>force</em> new line, <em>never</em> causes execution.</li>
+<li><kbd>Shft-Enter</kbd> <em>force</em> execution regardless of where cursor is, no newline added.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice running multiline code in Qt Console
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Practice inputting the code shown below <em>one line at a time</em>.</p>
+<ul>
+<li>After inputting each line, select <kbd>Ctrl-Enter</kbd></li>
+<li>Make sure to include the semi-colon (;) only at the end of the last line</li>
+<li>After inputting the semi-colon on the last line, select <kbd>Shft-Enter</kbd></li>
+</ul>
+<p>The output should be four line graphs of Density vs tip for each day in the dataset. You can save this as an HTML file and open the code and graphs in a browser.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">'tips'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ordered_days <span class="op">=</span> tips.day.value_counts().index</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> sns.FacetGrid(tips, row<span class="op">=</span><span class="st">'day'</span>, row_order<span class="op">=</span>ordered_days, height <span class="fl">1.5</span>, aspect <span class="op">=</span> <span class="dv">4</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>chart.<span class="bu">map</span>(sns.kdeplot, <span class="st">'tips'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<h3 data-number="3.3" id="tabs-and-kernels" class="anchored"><span class="header-section-number">3.3</span> Tabs and Kernels</h3>
+<p>A kernel is the active “computational engine” that executes code. When you add a new tab you have three options for the kernel</p>
+<ul>
+<li><strong>New tab with new kernel</strong>: Opens a new tab with a new IPython kernel</li>
+<li><strong>New tab with same kernel</strong>: Creates a child of a parent kernel loaded on a particular tab. Objects initialized on the parent tab are accessible in both tabs.</li>
+<li><strong>New tab with existing kernel</strong>: Opens a new tab and lets you choose from kernels other than IPython.</li>
+</ul>
+<p>The first two are the most common. The <strong>New tab with same kernel</strong> is convenient if you are investigating alternative scripts or writing functions.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Bob McQuaid</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

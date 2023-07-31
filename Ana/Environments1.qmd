@@ -1,0 +1,156 @@
+---
+pagetitle: "Using Navigator"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Using Navigator
+
+Each Python project should have its own conda environment. Each environment can use different versions of Python or packages and can be shared with others without compatibility issues. This section describes doing so using the Conda Navigator
+
+## Basic concepts
+
+Each environment is like a separate Python installation and is simply a dedicated directory on your system. A package manager ensures the directory contains the appropriate versions based on the latest stable available or what you specify. It also finds and loads all the appropriate dependencies for these versions. This system is particularly effective in a production environment where you may be working on multiple projects from with different programmers or on legacy systems that use older package versions. You can view the directory where your packages are stored by opening **cmd.exe Prompt** in the Navigator and enter `conda info`.
+
+The base environment is installed when you install Anaconda and includes Python and core libraries and dependencies of conda. Generally, create a new environment for each project and install additional packages by project - not in the base.
+
+### Conda and pip
+
+Some packages, not available through Navigator, must be installed using pip (Python management system) which is available in each environment and installs packages from PyPI. However, for projects requiring the use of pip, it is best to create the environment by proceeding:
+
+1. Install packages using conda navigator first.
+2. Install packages needing pip.
+3. Don't run pip in the base environment.
+4. If changes are needed in the new project, recreate the environment in order of 1 and 2 again.
+5. Document the conda and pip requirements in an environment text file (discussed later).
+
+## Creating a New Environment
+
+1. Open Anaconda Navigator desktop app.
+2. Select the **Environments** tab and select the **Create** button (bottom of panel). In the pop-up window, enter `my_first_env` in the **New environment name** field. 
+3. Select **Create** in that window.
+4. The new environment appears as the now *active* environment. In the package dropdown list, select **Installed**. 
+
+::: {.callout-tip}
+## the *envs* folder
+
+The name you enter will be a sub-folder in the *envs* folder within your Anaconda installation. Therefore, each environment must have unique names. The version of Python in that environment defaults to the most recent stable version of Python available; earlier versions are available in case you want to use one.
+:::
+
+## Managing Packages
+
+::: {.callout-warning}
+## Working in the **active** environment
+
+Whatever environment you have selected as **active** is where new packages are installed, updated, or removed. Make sure that when managing packages, you have selected your desired environment. 
+:::
+
+> For the remainder of this page, we will be working in `my_first_env` so make sure you select it before performing these operations.
+
+### Find and Install Packages
+
+Select the **Environments** tab and select the `my_first_env` environment. The currently installed packages appear in the panel to the right. There is a dropdown list above the packages with the following options:
+
+* Installed
+  + you can scroll to view or "Search Packages" by typing part of the package name to limit options. In my case `my_first_env` environment had 18 packages installed.
+* Not Installed
+  + you can scroll to view or "Search Packages" by typing part of the package name to limit options. There is likely a large list of not installed packages available.
+* Updatable
+* Selected
+* All
+
+::: {.callout-warning}
+## Using the "Search Packages" causes dropdown list to disappear
+
+If you type in the "Search Packages" field and then change the dropdown between Installed and Not Installed or change the active Environment, the package list may disappear. You simply need to clear the "Search Packages" field and the package list will reappear correctly.
+:::
+
+### Additional Packages
+
+Additional packages are available by a number of different independent providers and contributors. You can access these channels by adding a **Channel**. Select the **Channel** button next to the packages dropdown list and enter the channel you wish to add. For example, the [conda-forge](https://conda-forge.org/docs/) community has thousands of contributors who provide packages. To add their channel, 
+
+1. Select the **Channel** button 
+2. Click the **Add** button
+3. Enter `conda-forge` in the channel name field and {{< kbd Enter >}}
+4. Select the **Update channels** button
+
+Select **All** in the packages dropdown list.  The number of packages available (shown at the bottom of Navigator) likely increased (mine went from 9,675 to over 25,000).  You can remove a channel by returning to the **Channel** button and selecting the trash can ({{< fa trash-can >}}) icon adjacent to the channel you wish to delete.
+
+::: {.callout-caution collapse="true"}
+## Practice adding a package to the base environment
+
+[SimPy](https://simpy.readthedocs.io/en/latest/index.html) is a process-based discrete-event simulation framework based on standard Python. Let's add it to the base environment in Navigator.
+
+1. Select the **Environments** tab and select the **my_first_env** environment in the left navigation panel. 
+2. In the package dropdown list select **Installed** and type `SimPy` in the **Package Search** field. It is very likely the list will be empty (unless you added SimPy previously).
+3. Leave `SimPy` in the **Package Search** field and select **Not installed** in the package dropdown list. You may see more than one package available, but we are only interested in the one simply titled "SimPy."
+4. Select the checkbox ({{< fa square-check >}}) icon next to the SimPy package
+5. Select the **Apply** button at the bottom of the Navigator panel.
+
+In a few moments, an "Install Packages" window will appear listing the SimPy package added as well as any packages on which SimPy depends to be added or modified to the **my_first_env** environment . Select the **Apply** button in that window to complete the process.
+
+6. Select **Installed** in the package dropdown list and you will see "simpy" has been installed. Clear the **Package Search** field and your **Installed** list has increased to 19 packages.
+
+:::
+
+::: {.callout-warning}
+## The "**-base**" packages
+
+Can cause confusion: there is a difference between
+
+* the **base** environment when you first install Anaconda, and 
+* **-base** versions of most major packages
+
+Major libraries often appear duplicated. For example, select the **Environments** tab {{< fa arrow-right >}} the **base** environment {{< fa arrow-right >}}  **Installed** in the package dropdown list and type `matplotlib` in the **Package Search** field. There may be more, but note a **matplotlib** and **matplotlib-base** are identified. The **-base** packages tend to be lighter versions (less functional) loaded when installing other packages that depend on the main package. 
+
+The **base** environment and packages versions with a **-base** suffix are two completely different things.
+:::
+
+### Updating and Removing Packages
+
+It is common for newer versions of installed packages to become available over time. To see what newer versions of installed packages are available, 
+
+1. Select the **Environments** tab and the **my_first_env** environment
+2. In the package dropdown list, select **Updatable**. The number in your list may vary from others - be short or very long (in my case, there were 282 updatable packages in the **base** environment and 2 in the **my_first_env** environment). 
+3. If you have any **Updatable** packages in **my_first_env** environment,  select each one and **mark for update** in the pop-up and select **Apply** at the bottom of the Navigator panel.
+
+In a few moments, an "Update Packages" window will appear. In **my_first_env** environment, it lists two packages in need of update. For reference, in my **base** environment it states, 
+
+>384 packages will be modified 44 packages will be removed 45 packages will be installed
+
+Select the **Apply** button in that window to complete the process. Depending on the number of packages affected, this may take a while. In **my_first_env** environment, when I try to update them, the messages states, "*All requested packages are already installed.*" Annoying, but not a problem. 
+
+In my **base** environment, I tried to update the **Python** package and received an error. If you get an error, the process will fail to install any packages at this time. More annoying, but still not a major problem. Generally, you can use **pip** to install these packages (discussed later).
+
+Finally, if you need to update a large number of packages, this method would be quite painful. Later, using a terminal window to update all packages in an environment will be discussed. Basically, you select the green arrow adjacent to the name of the environment, select "Open Terminal", and type `conda update --all` (details later).
+
+## Duplicating Environments
+
+Once we have a working environment, we often wish to use it on a different project. We can duplicate an environment in one of two ways:
+
+* Clone
+  + Select the environment, select **Clone** at the bottom of the pane, enter a name for the new environment.
+* Import
+  + This process opens an Environment file previously created which lists all the packages and versions in an environment. This is done using the Command Line Interface (CLI) by activating an environment and then exporting the list to a YAML file (discussed later).
+  
+## Backing up Environments
+
+Sometimes we backup a environment to create a checkpoint for work so far, keep a copy for disaster recovery, or migrate between machines. You can backup to your local machine or to Anaconda Cloud. Select the **Backup** button at the bottom of the pane while the desired environment is selected.
+
+## Removing Environments
+
+Select the environment to remove and select the **Remove** button at the bottom of the pane. It's a good practice to create an environment file before removing an environment in case you wish to recreate it later.
+
+::: {.callout-warning}
+## Avoid Data Loss
+
+When you remove an environment, it's entire folder is deleted including any data stored in that folder. It is good practice to keep data in separate folders than the environment folder.
+:::

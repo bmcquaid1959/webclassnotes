@@ -1,24 +1,20 @@
 ---
-title: "Simulation"
-editor: visual
+pagetitle: "Simulation1"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
 ---
 
-## Simulation Class this is in a subfolder Sim1
+## Introduction
 
-I am testing subfolders.
+[Modeling and Simulation in Python](https://allendowney.github.io/ModSimPy/index.html#modeling-and-simulation-in-python) for free. It is also [available at Amazon](https://www.amazon.com/Modeling-Simulation-Python-Allen-Downey/dp/1718502168/ref=sr_1_30?crid=137KILFRCT9FY&keywords=python&qid=1690484333&sprefix=python%2Caps%2C116&sr=8-30) for $35. It has ipynb files available at the free link.
 
-### testing a sub heading 3
+[SimPy](https://simpy.readthedocs.io/en/latest/index.html) is a process-based discrete-event simulation framework based on standard Python.
 
-This is just a test to see the side bar.
-
-### testing a sub heading 3.1
-
-Testing DIagrams
-
-    ```{mermaid}
-    flowchart LR
-      A[Hard edge] --> B(Round edge)
-      B --> C{Decision}
-      C --> D[Result one]
-      C --> E[Result two]
-    ```

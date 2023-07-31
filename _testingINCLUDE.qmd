@@ -1,0 +1,7 @@
+---
+title: "testingINCLUDE.qmd"
+---
+
+### Analyze. Share. Reproduce. Your data has a story---tell it with Quarto.
+
+[Get Started](http://www.pepperdine.edu)

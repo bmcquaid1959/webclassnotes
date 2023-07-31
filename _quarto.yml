@@ -1,10 +1,10 @@
 project:
   type: website
-#  output-dir: _site
-  output-dir: docs
+  output-dir: _site
+#  output-dir: docs
 
 website:
-  title: "Professor McQuaid"
+  title: "Beta Mu Analytics"
   page-footer:
     center: "Copyright 2023, Bob McQuaid"
   page-navigation: true
@@ -14,6 +14,10 @@ website:
     left:
       - text: "Home"
         file: index.qmd
+      - text: "Anaconda"
+        file: Ana/GettingStarted.qmd
+      - text: "Analytics for Business Decisions"
+        file: A4BD/HomeA4BD.qmd
       - text: "Simulation"
         file: Sim1/simulation.qmd
         icon: "sliders"
@@ -29,12 +33,61 @@ website:
       - about.qmd
 
   sidebar:
-    - id: simulation
-      title: "Simulation"
+    - id: A4BD
+      title: "Analytics for Business Decisions"
       style: "docked"
       contents:
-        - text: "Simulation"
+        - A4BD/HomeA4BD.qmd
+        - section: "Content"
+          contents:
+            - A4BD/AnalyticsTech.qmd
+            - A4BD/BusStat1.qmd
+            - A4BD/BusStat2.qmd
+            - A4BD/Regress1.qmd
+            - A4BD/Regress2.qmd
+            - A4BD/ForePred.qmd
+            - A4BD/DistProb.qmd
+            - A4BD/Queue.qmd
+            - A4BD/SimMdl1.qmd
+            - A4BD/SimMdl2.qmd
+            - A4BD/DescAnal.qmd
+            - A4BD/ProjMgmt1.qmd
+            - A4BD/ProjMgmt2.qmd
+            - A4BD/OptMdl1.qmd
+            - A4BD/OptMdl2.qmd
+            - A4BD/SensAnal.qmd
+            - A4BD/NetwMdl.qmd
+            - A4BD/IntMdl.qmd
+            - A4BD/Simplex.qmd
+            - A4BD/ArtIntell.qmd
+            - A4BD/Review.qmd
+            - A4BD/Final.qmd
 
+    - id: Anaconda
+      title: "Anaconda"
+      contents:
+        - section: "Installation"
+          contents:
+          - href: Ana/Installation.qmd
+        - text: "---"
+        - section: "Environments"
+          contents:
+          - href: Ana/Environments1.qmd
+          - href: Ana/Environments2.qmd
+        - text: "---"
+        - section: "Jupyter Qt Console"
+          contents:
+          - href: Ana/ScriptingQt.qmd
+        - text: "---"
+        - section: "Spyder IDE"
+          contents:
+          - href: Ana/ScriptingSpyder.qmd
+
+
+    - id: simulation
+      title: "Simulation"
+      contents:
+        - text: "Simulation"
         - Sim1/simulation.qmd
         - Sim1/sim2.qmd
         # navigation items

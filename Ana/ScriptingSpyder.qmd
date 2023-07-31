@@ -1,0 +1,16 @@
+---
+pagetitle: "Spyder - Scientific Python Development IDE"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Spyder IDE
+

@@ -1,0 +1,145 @@
+---
+pagetitle: "Jupyter Qt Console"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Scripting in the Jupyter Qt Console
+
+The [Jupyter Qt Console](https://qtconsole.readthedocs.io/en/stable/index.html) blends the simplicity of a terminal with features of a GUI to quickly test ideas, explore datasets, and work through tutorials. The interface is not intended for extended interactive use, but includes line numbers, multiple tabs, rich media output, command history retrieval across sessions, multiline editing, syntax highlighting, session export, and more.
+
+There is a pretty [quick tutorial](https://www.tutorialspoint.com/jupyter/jupyter_qtconsole_getting_started.htm) available if you wish to practice a bit after completing this section.
+
+### Seaborn Data Visualization Library
+
+Viewing plots in the QtConsole requires installation of the seaborn data visualization library. We'll use **my_first_env** environment during this section.
+
+1.  In Navigator, make the **my_first_env** environment as the active environment.
+2.  Select **Not Installed** in the package dropdown menu
+3.  Enter `seaborn` in the package search field
+4.  Select the check box {{< fa square-check >}} next to the seaborn package.
+5.  Select the **Apply** button at the bottom of the panel.
+6.  When the "Install packages" window pops up, select **Apply** in that window to install seaborn and required dependencies (there may be many).
+
+## Install and Launch Jupyter Qt Console Using Navigator
+
+1.  Select the Home {{< fa home >}} tab in Navigator.
+2.  Select **my_first_env** in the dropdown to identify the environment in which to install **Qt Console**.
+3.  Select the **Install** button on the **Qt Console** tile.
+    -   *Ignore* the package named *jupyter console* as it does not include graphics capability.
+    -   If no **Qt Console** package is available on the Home {{< fa home >}} tab, then it has not been installed yet.
+        i.  In Navigator, select the {{< fa cube >}} Environment tab and make the **my_first_env** environment as the active environment.
+        ii. Select **Not Installed** in the package dropdown menu
+        iii. Enter `qtconsole` in the package search field
+        iv. Select the check box {{< fa square-check >}} next to the **qtconsole** package.
+        v.  Select the **Apply** button at the bottom of the panel.
+        vi. When the "Install packages" window pops up, select **Apply** in that window to install seaborn and required dependencies (there may be many).
+        vii. Return to the {{< fa home >}} Home tab, select the {{< fa rotate-right >}} Refresh button. Complete steps 1-2 above.
+    -   If **Qt console** still does not appear in a tile,
+        i.  Return to the Environments tab and select the {{< fa circle-chevron-right >}} button for the **my_first_env** environment and select **Open Terminal**.
+        ii. Enter `conda install qtconsole`
+        iii. Review the messages returned, if it warns you to upgrade, enter `conda update -n base -c defaults conda`
+        iv. There will be a lengthy message to upgrade, downgrade, and remove packages below which you will need to enter `y` at the \*\*Proceed? (\[y\],n) prompt.
+        v.  You may get a verification error, but the installation was likely successful.
+4.  Launch Jupyter Qt Console
+    i.  Return to the Environments tab and select the {{< fa circle-chevron-right >}} button for the **my_first_env** environment and select **Open Terminal**.
+    ii. Enter `jupyter qtconsole` and hit enter.
+    iii. Input `5 * 2 + (10 / 2)` adjacent to the **In \[1\]:** and Enter. The result should say [**Out\[1\]:**]{style="color:red"} 15.0\*\*.
+
+## Qt Console Controls
+
+### Syntax Style
+
+The console provides color-coding for various elements like the **In** and [**Out**]{style="color:red"} called *syntax highlighting*. You can choose from a large number of style types by selecting **View** {{< fa caret-right >}} **Syntax Style** at your discretion.
+
+Open a new tab by selecting **File** {{< fa caret-right >}} **New Tab with New kernel**. You can rename the tab by entering **Window** {{< fa caret-right >}} **Rename Current Tab**. You can choose a different syntax style on each tab if you wish. That can be helpful when experimenting with different codes.
+
+### Keyboard Shortcuts
+
+Keyboard shortcuts (or *keybindings*) such as {{< kbd Ctrl-C >}} for copy are available at **Help** {{< fa caret-right >}} **QtConsole help** under the **Key bindings** heading.
+
+The box below contains a list of these, some you will use all the time, others you may not use at all.
+
+::: {.callout-note collapse="true"}
+## Key Bindings
+
+-   {{< kbd Ctrl-c >}} copy highlighted text to clipboard (prompts are automatically stripped).
+-   {{< kbd Ctrl-Shft-C >}} copy highlighted text to clipboard (prompts are not stripped).
+-   {{< kbd Ctrl-v >}} paste text from clipboard.
+-   {{< kbd Ctrl-z >}} undo (retrieves lost text if you move out of a cell with the arrows).
+-   {{< kbd Ctrl-Shft-Z >}} redo.
+-   {{< kbd Ctrl-l >}} clear terminal.
+-   
+-   {{< kbd Ctrl-a >}} go to beginning of line.
+-   {{< kbd Ctrl-e >}} go to end of line.
+-   {{< kbd Ctrl-p >}} previous line (like up arrow)
+-   {{< kbd Ctrl-n >}} next line (like down arrow)
+-   {{< kbd Ctrl-f >}} forward (like right arrow)
+-   {{< kbd Ctrl-b >}} back (like left arrow)
+-   {{< kbd Alt-< >}} move to the beginning of the input region.
+-   {{< kbd Alt-> >}} move to the end of the input region.
+-   
+-   {{< kbd Ctrl-y >}} yank (paste)
+-   {{< kbd Ctrl-d >}} delete next character, or exits if input is empty
+-   {{< kbd Alt-d >}} delete next word.
+-   {{< kbd Alt-backspace >}}: delete previous word.
+-   {{< kbd Ctrl-+ >}} increase font size.
+-   {{< kbd Ctrl– >}} decrease font size.
+-   
+-   {{< kbd Ctrl-. >}} force a kernel restart (a confirmation dialog appears).
+-   
+-   {{< kbd Ctrl-Alt-space >}} toggle full screen. (Command-Control-Space on Mac OS X)
+-   {{< kbd Ctrl-o >}} move to 'other' area, between pager and terminal.
+-   {{< kbd Ctrl-u >}} kill from cursor to the begining of the line.
+-   {{< kbd Ctrl-k >}} kill from cursor to the end of the line.
+:::
+
+#### Running code
+
+When typing code in the console, the code on that line will execute if you select {{< kbd Enter >}} unless you are working on a multi-line script.
+
+A multi-line script can be input by selecting {{< kbd Ctrl-Enter >}} after typing the first line of code. Each line input after which you insert a new line by selecting {{< kbd Ctrl-Enter >}}. Once you've input all lines of code, select {{< kbd Shft-Enter >}} to execute the script.
+
+**Basics**
+
+1.  {{< kbd Enter >}} *execute* single line
+2.  {{< kbd Ctrl-Enter >}} *force* new line, *never* causes execution.
+3.  {{< kbd Shft-Enter >}} *force* execution regardless of where cursor is, no newline added.
+
+::: {.callout-note collapse="true"}
+## Practice running multiline code in Qt Console
+
+Practice inputting the code shown below *one line at a time*.
+
+* After inputting each line, select {{< kbd Ctrl-Enter >}}
+* Make sure to include the semi-colon (;) only at the end of the last line 
+* After inputting the semi-colon on the last line, select {{< kbd Shft-Enter >}}
+
+The output should be four line graphs of Density vs tip for each day in the dataset. You can save this as an HTML file and open the code and graphs in a browser.
+
+``` Python
+import seaborn as sns
+tips = sns.load_dataset('tips')
+ordered_days = tips.day.value_counts().index
+chart = sns.FacetGrid(tips, row='day', row_order=ordered_days, height 1.5, aspect = 4)
+chart.map(sns.kdeplot, 'tips');
+```
+:::
+
+### Tabs and Kernels
+
+A kernel is the active "computational engine" that executes code. When you add a new tab you have three options for the kernel
+
+-   **New tab with new kernel**: Opens a new tab with a new IPython kernel
+-   **New tab with same kernel**: Creates a child of a parent kernel loaded on a particular tab. Objects initialized on the parent tab are accessible in both tabs.
+-   **New tab with existing kernel**: Opens a new tab and lets you choose from kernels other than IPython.
+
+The first two are the most common. The **New tab with same kernel** is convenient if you are investigating alternative scripts or writing functions.

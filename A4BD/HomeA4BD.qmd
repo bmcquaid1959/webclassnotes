@@ -1,0 +1,14 @@
+---
+title: "Analytics for Business Decisions"
+subtitle: ""
+number-sections: false
+---
+
+
+## Course Description
+
+The focus of this course is on the application of analytics for strategic business decision making. The course introduces analytical tools that can be used to leverage data and information for complex problems. The course is designed to support the integration experience and includes an introduction to production and service operations. Specific business modeling applications include: regression analysis, time series forecasting, decision analysis, simulation, linear programming, queuing theory, and project management. These techniques assist managerial decision making in the dynamic and highly competitive world of business, including applications to finance, marketing, engineering, manufacturing, quality, service and human resources problems in such industries as health care, aerospace, high technology, entertainment, global business, and banking. Software technologies and spreadsheets are used extensively throughout this course.
+
+
+## Schedule by test content
+

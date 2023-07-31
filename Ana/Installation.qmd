@@ -1,0 +1,53 @@
+---
+pagetitle: "Getting Started"
+author: Bob McQuaid
+bibliography: ../references.bib
+csl: ../acm-sig-proceedings.csl
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: html
+number-sections: true
+section-divs: false
+toc: true
+toc-depth: 5
+---
+
+## Download and install
+
+[Anaconda](https://www.anaconda.com/download) the "Graphical Installer" for your operating system. For detailed instructions for loading Anaconda, visit Installing on [Windows](https://docs.anaconda.com/free/anaconda/install/windows/), [macOS](https://docs.anaconda.com/free/anaconda/install/mac-os/), or [Linux](https://docs.anaconda.com/free/anaconda/install/linux/).
+
+::: {.callout-warning}
+1. IF you do not have a 64-bit machine, then:
+    a. you should consider upgrading your equipment, it is definitely time.
+    b. not sure? Go to this [link](https://www.computerhope.com/issues/ch001121.htm) to figure it out.
+2. if you have a 32-bit machine and decide to keep using it, go to Anaconda's [older operating systems](https://docs.anaconda.com/free/anaconda/install/old-os/) and figure it out. This may become an issue for you later or it may not - the world can be very frustrating.
+
+The install will ask you to shut down all other programs before installation.
+:::
+
+**After finishing install**
+Once installation is complete, a browser window will open welcoming you to Anaconda and inviting you to [Register for Free](https://anaconda.cloud/sign-up?souce=installation-success). I recommend using your Pepperdine email address for this. A "Get more content" screen will pop-up. I registered and checked the *send me info* box - but you can choose to do that or not.
+
+**Enroll for your cloud acccount**
+The next screen will be a bit scary for many, but for now, select the link to *send verification email* to finish setting up your cloud account OR check your email as it may have already been sent. Once verified, you'll be redirected to the scary screen again.
+
+**Verify you've installed successfully** by starting Anaconda Navigator following [these instructions](https://docs.anaconda.com/free/anaconda/install/verify-install/#anaconda-navigator). When navigator opens, login using your cloud account credentials. If you encounter problems, visit the [troubleshooting links](https://docs.anaconda.com/free/navigator/troubleshooting/).
+
+::: {.callout-note}
+Sometimes getting through the initial installation of any software can be quite annoying while serving as a high-quality learning experience. Make sure to follow the instructions for your operating system; if you experience challenges, try the troubleshooting link above and some web searches. There are 35 million users making this the world's most popular Python development platform ([according to them](https://www.anaconda.com/)).
+
+:::
+
+## Getting started with Anaconda Navigator
+
+Visit the [Getting Started](https://docs.anaconda.com/free/navigator/getting-started/) page and spend about 10 minutes reviewing the contents of this page. 
+
+**Home** contains all applications that are installed (can be launched) and those you might wish to install. As you can imagine, there are many more available than are listed here.
+
+**Environments** are just folders or directories used to isolate and manage packages. On a windows machine, the base environment is in your user directory on your machine. You can create another by selecting CREATE at the bottom of Navigator and entering a new name. If you do create more environments, the active one has an arrow beside it. You can install any version of Python you wish in new environments, we won't be using this feature too much - but software developers might need it.
+
+**Learning** provides a large number of resources to help with learning the various available packages. It can be a bit overwhelming, but we will use most of these sparingly. The are largely written by software developers, so they can be pretty technical - good resource, but not necessarily best place to learn.
+
+
+
+
